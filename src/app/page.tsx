@@ -66,7 +66,16 @@ export default function Home() {
 
       {/* Quick links */}
       <section style={{ padding:"0 20px 56px" }}>
-        <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div className="max-w-4xl mx-auto">
+          {/* Divider + heading */}
+          <div className="flex items-center gap-4" style={{ marginBottom:"24px" }}>
+            <div style={{ flex:1, height:"1px", background:"linear-gradient(to right, transparent, #c8beb5, transparent)" }} />
+            <h2 style={{ fontWeight:800, fontSize:"1rem", color:"#8c7b6e", whiteSpace:"nowrap" }}>
+              🧭 Công Cụ Hữu Ích
+            </h2>
+            <div style={{ flex:1, height:"1px", background:"linear-gradient(to right, transparent, #c8beb5, transparent)" }} />
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {([
             { emoji:"🎂", label:"Tính tuổi bé", href:"/tinh-tuoi", color:"#c08890" },
             { emoji:"📏", label:"Bảng tăng trưởng", href:"/bang-tang-truong", color:"#6b9bd2" },
@@ -82,6 +91,7 @@ export default function Home() {
               <div style={{ fontWeight:800, fontSize:"0.88rem", color:item.color }}>{item.label}</div>
             </Link>
           ))}
+          </div>
         </div>
       </section>
 
