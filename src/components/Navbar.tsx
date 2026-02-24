@@ -3,15 +3,32 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
+const topLinks = [
+  { href:"/giai-doan/thai-ky",    label:"Thai Kỳ" },
+  { href:"/giai-doan/0-6-thang",  label:"0-6 Tháng" },
+  { href:"/giai-doan/6-12-thang", label:"6-12 Tháng" },
+  { href:"/giai-doan/1-2-tuoi",   label:"1-2 Tuổi" },
+  { href:"/phuong-phap-easy",     label:"EASY" },
+  { href:"/thuc-don-an-dam",      label:"Ăn Dặm" },
+  { href:"/giac-ngu",             label:"Giấc Ngủ" },
+  { href:"/checklist",            label:"Checklist" },
+  { href:"/tiem-chung",           label:"Tiêm Chủng" },
+  { href:"/bang-tang-truong",     label:"Tăng Trưởng" },
+];
+
 const links = [
   { href:"/giai-doan/thai-ky",    label:"Thai Kỳ",    emoji:"🤰" },
   { href:"/giai-doan/0-6-thang",  label:"0-6 Tháng",  emoji:"👶" },
   { href:"/giai-doan/6-12-thang", label:"6-12 Tháng", emoji:"🥣" },
   { href:"/giai-doan/1-2-tuoi",   label:"1-2 Tuổi",   emoji:"🚶" },
+  { href:"/phuong-phap-easy",     label:"EASY",        emoji:"📋" },
+  { href:"/thuc-don-an-dam",      label:"Ăn Dặm",     emoji:"🍽️" },
+  { href:"/giac-ngu",             label:"Giấc Ngủ",    emoji:"😴" },
+  { href:"/checklist",            label:"Checklist",   emoji:"✅" },
   { href:"/tiem-chung",           label:"Tiêm Chủng",  emoji:"💉" },
-  { href:"/meo-hay",              label:"Mẹo Hay",     emoji:"✨" },
-  { href:"/tinh-tuoi",            label:"Bé Của Tôi",  emoji:"🎂" },
   { href:"/bang-tang-truong",     label:"Tăng Trưởng", emoji:"📏" },
+  { href:"/tinh-tuoi",            label:"Bé Của Tôi",  emoji:"🎂" },
+  { href:"/meo-hay",              label:"Mẹo Hay",     emoji:"✨" },
   { href:"/hoi-dap",              label:"Hỏi Đáp",     emoji:"❓" },
   { href:"/me-sau-sinh",          label:"Mẹ Sau Sinh", emoji:"🤱" },
 ];
@@ -53,11 +70,11 @@ export default function Navbar() {
         </Link>
 
         <nav className="hidden xl:flex items-center gap-1 flex-wrap justify-end">
-          {links.map(l => (
+          {topLinks.map(l => (
             <Link key={l.href} href={l.href}
               className="no-underline whitespace-nowrap"
-              style={{ background:"#eae6e1", borderRadius:"30px", padding:"5px 12px",
-                       fontSize:"0.78rem", fontWeight:700, color:"#c08890",
+              style={{ background:"#eae6e1", borderRadius:"30px", padding:"5px 10px",
+                       fontSize:"0.72rem", fontWeight:700, color:"#c08890",
                        boxShadow:"3px 3px 8px rgba(180,170,155,0.6),-3px -3px 8px rgba(255,255,255,0.85)",
                        transition:"box-shadow 0.15s" }}>
               {l.label}

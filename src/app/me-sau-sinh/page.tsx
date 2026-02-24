@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import { postpartumData } from "@/lib/data";
 import Link from "next/link";
 import ShareButton from "@/components/ShareButton";
+
+export const metadata: Metadata = {
+  title: "Dinh Dưỡng Mẹ Sau Sinh — 1000 Ngày Đầu Đời",
+  description: "Hướng dẫn dinh dưỡng, phục hồi thể chất và sức khoẻ tinh thần cho mẹ sau sinh. Bổ sung vi chất, chế độ ăn lợi sữa.",
+  openGraph: {
+    title: "Chăm Sóc Mẹ Sau Sinh",
+    description: "Dinh dưỡng, phục hồi và sức khoẻ tinh thần cho mẹ bỉm sữa.",
+  },
+};
 
 const neu: React.CSSProperties = {
   background: "#eae6e1",

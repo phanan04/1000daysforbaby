@@ -33,6 +33,45 @@ export interface VaccineItem {
   note?: string;
 }
 
+/* ===== EASY Method ===== */
+export interface EASYSchedule {
+  ageRange: string;
+  emoji: string;
+  totalSleep: string;
+  naps: string;
+  easyRoutine: { letter: string; label: string; duration: string; detail: string }[];
+  tips: string[];
+}
+
+/* ===== Weaning Menu ===== */
+export interface WeaningMenu {
+  ageRange: string;
+  emoji: string;
+  title: string;
+  principle: string;
+  sampleDays: { day: string; meals: { time: string; menu: string }[] }[];
+  notes: string[];
+}
+
+/* ===== Checklist ===== */
+export interface ChecklistGroup {
+  stage: string;
+  emoji: string;
+  color: string;
+  items: { name: string; essential: boolean }[];
+}
+
+/* ===== Sleep Chart ===== */
+export interface SleepData {
+  ageRange: string;
+  emoji: string;
+  totalHours: string;
+  nightHours: string;
+  naps: string;
+  napDuration: string;
+  tips: string[];
+}
+
 export const stages: Stage[] = [
   {
     slug: "thai-ky",
@@ -529,6 +568,430 @@ export const postpartumData: PostpartumSection[] = [
       "DHA: 200–300mg/ngày (từ cá béo hoặc viên bổ sung) hỗ trợ não bé qua sữa mẹ.",
       "Iốt: quan trọng cho tuyến giáp mẹ và phát triển trí não bé → dùng muối iốt.",
       "Tiếp tục vitamin tổng hợp bà bầu trong 3–6 tháng sau sinh rồi chuyển sang đa vitamin thường.",
+    ],
+  },
+];
+
+/* ========================================
+   PHƯƠNG PHÁP EASY (Tracy Hogg)
+   ======================================== */
+export const easySchedules: EASYSchedule[] = [
+  {
+    ageRange: "0–6 tuần",
+    emoji: "🍼",
+    totalSleep: "16–18 giờ",
+    naps: "Nhiều giấc ngắn",
+    easyRoutine: [
+      { letter: "E", label: "Eat (Ăn)", duration: "30–40 phút", detail: "Bú mẹ/bình mỗi 2–3 giờ. Cho bú cả 2 bên, mỗi bên 15–20 phút." },
+      { letter: "A", label: "Activity (Hoạt động)", duration: "15–20 phút", detail: "Tắm, thay tã, tummy time 1–2 phút, nói chuyện nhẹ." },
+      { letter: "S", label: "Sleep (Ngủ)", duration: "1.5–2 giờ", detail: "Quấn chặt, phòng tối, tiếng ồn trắng. Đặt xuống khi buồn ngủ, chưa ngủ hẳn." },
+      { letter: "Y", label: "Your time (Thời gian mẹ)", duration: "Còn lại", detail: "Mẹ nghỉ ngơi, ăn uống, tắm. Ưu tiên ngủ khi bé ngủ." },
+    ],
+    tips: [
+      "Chu kỳ EASY lặp lại mỗi 2.5–3 giờ.",
+      "Bé giai đoạn này cần bú đêm — không cần ép lịch.",
+      "Ghi nhật ký ăn-ngủ giúp nhận ra pattern của bé.",
+    ],
+  },
+  {
+    ageRange: "6 tuần – 4 tháng",
+    emoji: "👶",
+    totalSleep: "14–16 giờ",
+    naps: "3–4 giấc/ngày",
+    easyRoutine: [
+      { letter: "E", label: "Eat (Ăn)", duration: "20–30 phút", detail: "Bú mỗi 3–3.5 giờ. Lượng bú mỗi cữ tăng, số cữ giảm dần." },
+      { letter: "A", label: "Activity (Hoạt động)", duration: "30–45 phút", detail: "Tummy time 5–10 phút, chơi đồ chơi tương phản, đọc sách, hát." },
+      { letter: "S", label: "Sleep (Ngủ)", duration: "1.5–2.5 giờ", detail: "Bắt đầu tập nhận tín hiệu buồn ngủ (dụi mắt, quấy). Đặt xuống sớm." },
+      { letter: "Y", label: "Your time (Thời gian mẹ)", duration: "Còn lại", detail: "Bắt đầu ra ngoài đi dạo ngắn, gặp bạn bè, tập nhẹ." },
+    ],
+    tips: [
+      "Chu kỳ EASY kéo dài 3–3.5 giờ.",
+      "Bắt đầu tập phân biệt ngày/đêm: ban ngày sáng & hoạt động, đêm tối & yên tĩnh.",
+      "Sleep regression 4 tháng: bé thức đêm nhiều hơn — bình thường, kiên nhẫn.",
+    ],
+  },
+  {
+    ageRange: "4–6 tháng",
+    emoji: "🧒",
+    totalSleep: "14–15 giờ",
+    naps: "3 giấc/ngày",
+    easyRoutine: [
+      { letter: "E", label: "Eat (Ăn)", duration: "15–20 phút", detail: "Bú mỗi 3.5–4 giờ. Có thể tập ăn dặm từ 5.5–6 tháng (dấu hiệu sẵn sàng)." },
+      { letter: "A", label: "Activity (Hoạt động)", duration: "1–1.5 giờ", detail: "Tummy time 15–20 phút, tập lẫy, với đồ chơi, ngồi có hỗ trợ." },
+      { letter: "S", label: "Sleep (Ngủ)", duration: "1.5–2 giờ", detail: "2 giấc dài (sáng + chiều) + 1 giấc ngắn cuối chiều. Bắt đầu routine ngủ đêm." },
+      { letter: "Y", label: "Your time (Thời gian mẹ)", duration: "Còn lại", detail: "Giấc ngủ đêm bắt đầu dài hơn → mẹ có thể nghỉ ngơi tốt hơn." },
+    ],
+    tips: [
+      "Chu kỳ EASY khoảng 4 giờ.",
+      "Xây dựng bedtime routine: tắm → massage → bú → hát ru → đặt nằm.",
+      "Cho bé tự ngủ (đặt xuống lúc buồn ngủ) giúp bé tự liên kết giấc.",
+    ],
+  },
+  {
+    ageRange: "6–9 tháng",
+    emoji: "🥣",
+    totalSleep: "13–14 giờ",
+    naps: "2 giấc/ngày",
+    easyRoutine: [
+      { letter: "E", label: "Eat (Ăn)", duration: "20–30 phút", detail: "Ăn dặm 2 bữa + bú 4–5 cữ. Thử đa dạng rau, trái cây, protein." },
+      { letter: "A", label: "Activity (Hoạt động)", duration: "2–2.5 giờ", detail: "Bò, tập đứng vịn, chơi đồ chơi nguyên nhân-kết quả, đọc sách." },
+      { letter: "S", label: "Sleep (Ngủ)", duration: "1–2 giờ", detail: "2 giấc: sáng (~1.5h) + chiều (~1.5h). Bỏ giấc ngắn cuối chiều." },
+      { letter: "Y", label: "Your time (Thời gian mẹ)", duration: "Còn lại", detail: "Thời gian bé thức dài hơn → mẹ linh hoạt sắp xếp." },
+    ],
+    tips: [
+      "Window thức: 2.5–3.5 giờ.",
+      "Sleep regression 8–10 tháng do lo lắng xa cách (separation anxiety) — vỗ về thêm.",
+      "Giữ lịch ăn-ngủ đều đặn giúp bé ổn định.",
+    ],
+  },
+  {
+    ageRange: "9–12 tháng",
+    emoji: "🚶",
+    totalSleep: "12–14 giờ",
+    naps: "2 giấc/ngày",
+    easyRoutine: [
+      { letter: "E", label: "Eat (Ăn)", duration: "20–30 phút", detail: "3 bữa ăn dặm + 3–4 cữ bú/sữa. Bé ăn finger food, tập tự xúc." },
+      { letter: "A", label: "Activity (Hoạt động)", duration: "3–3.5 giờ", detail: "Đi men, tập đi, xếp chồng, đẩy xe, chơi ngoài trời." },
+      { letter: "S", label: "Sleep (Ngủ)", duration: "1–1.5 giờ", detail: "2 giấc: sáng (1h) + chiều (1.5h). Ngủ đêm 10–12 giờ liền." },
+      { letter: "Y", label: "Your time (Thời gian mẹ)", duration: "Còn lại", detail: "Bé ngủ ổn → mẹ có thời gian riêng nhiều hơn." },
+    ],
+    tips: [
+      "Nếu bé chống giấc sáng → sắp chuyển sang 1 giấc/ngày (thường 12–18 tháng).",
+      "Duy trì giờ ngủ đêm cố định: tắm 6:30 → bú 7:00 → ngủ 7:30.",
+      "Hạn chế screen time trước giờ ngủ.",
+    ],
+  },
+  {
+    ageRange: "12–24 tháng",
+    emoji: "🏃",
+    totalSleep: "11–14 giờ",
+    naps: "1–2 giấc → 1 giấc",
+    easyRoutine: [
+      { letter: "E", label: "Eat (Ăn)", duration: "20–30 phút", detail: "3 bữa chính + 2 bữa phụ. Ăn cùng gia đình, tự xúc muỗng." },
+      { letter: "A", label: "Activity (Hoạt động)", duration: "4–5 giờ", detail: "Đi, chạy, leo cầu thang, tô màu, chơi giả vờ, chơi ngoài trời." },
+      { letter: "S", label: "Sleep (Ngủ)", duration: "1.5–2.5 giờ", detail: "1 giấc chiều duy nhất. Ngủ đêm 10–12 giờ." },
+      { letter: "Y", label: "Your time (Thời gian mẹ)", duration: "Còn lại", detail: "Bé độc lập hơn → mẹ có thể làm việc, tập luyện." },
+    ],
+    tips: [
+      "Chuyển sang 1 giấc ngủ trưa thường xảy ra 14–18 tháng.",
+      "Regression 18 tháng: bé muốn kiểm soát → kiên nhẫn, giữ routine.",
+      "Không dùng giấc ngủ như hình phạt — giữ liên kết tích cực với giấc ngủ.",
+    ],
+  },
+];
+
+/* ========================================
+   THỰC ĐƠN ĂN DẶM MẪU
+   ======================================== */
+export const weaningMenus: WeaningMenu[] = [
+  {
+    ageRange: "6–7 tháng",
+    emoji: "🥣",
+    title: "Giai đoạn làm quen",
+    principle: "Bột/cháo loãng, 1 bữa/ngày, 1–2 thìa cà phê. Thử 1 loại thực phẩm mới mỗi 3 ngày.",
+    sampleDays: [
+      { day: "Thứ 2", meals: [{ time: "11:00", menu: "Bột gạo + bí đỏ nghiền (2 thìa)" }] },
+      { day: "Thứ 3", meals: [{ time: "11:00", menu: "Bột gạo + bí đỏ nghiền (3 thìa)" }] },
+      { day: "Thứ 4", meals: [{ time: "11:00", menu: "Bột gạo + khoai lang nghiền (2 thìa)" }] },
+      { day: "Thứ 5", meals: [{ time: "11:00", menu: "Bột gạo + khoai lang nghiền (3 thìa)" }] },
+      { day: "Thứ 6", meals: [{ time: "11:00", menu: "Bột gạo + cà rốt nghiền (2 thìa)" }] },
+      { day: "Thứ 7", meals: [{ time: "11:00", menu: "Bột gạo + cà rốt + bí đỏ (3 thìa)" }] },
+      { day: "Chủ nhật", meals: [{ time: "11:00", menu: "Cháo trắng loãng + bông cải xanh nghiền" }] },
+    ],
+    notes: [
+      "Vẫn bú mẹ/sữa công thức là nguồn dinh dưỡng chính.",
+      "Nghiền nhuyễn hoàn toàn, độ loãng như sữa đặc.",
+      "Không nêm muối, đường, nước mắm.",
+      "Quan sát dị ứng: phát ban, nôn, tiêu chảy → dừng ngay.",
+    ],
+  },
+  {
+    ageRange: "7–8 tháng",
+    emoji: "🥕",
+    title: "Tăng đa dạng",
+    principle: "Cháo + protein, 2 bữa/ngày. Nghiền thô hơn, bé tập nhai.",
+    sampleDays: [
+      { day: "Thứ 2", meals: [
+        { time: "10:00", menu: "Cháo thịt gà + bí đỏ (50ml)" },
+        { time: "17:00", menu: "Cháo khoai lang + lòng đỏ trứng" },
+      ]},
+      { day: "Thứ 3", meals: [
+        { time: "10:00", menu: "Cháo cá hồi + bông cải xanh" },
+        { time: "17:00", menu: "Cháo bí đỏ + đậu phụ nghiền" },
+      ]},
+      { day: "Thứ 4", meals: [
+        { time: "10:00", menu: "Cháo thịt heo + cà rốt + rau ngót" },
+        { time: "17:00", menu: "Cháo gạo + sữa + chuối nghiền" },
+      ]},
+      { day: "Thứ 5", meals: [
+        { time: "10:00", menu: "Cháo tôm + mồng tơi" },
+        { time: "17:00", menu: "Cháo thịt bò + khoai tây" },
+      ]},
+      { day: "Thứ 6", meals: [
+        { time: "10:00", menu: "Cháo gan gà + rau dền" },
+        { time: "17:00", menu: "Cháo đậu xanh + bí đỏ" },
+      ]},
+      { day: "Thứ 7", meals: [
+        { time: "10:00", menu: "Cháo cá lóc + mướp" },
+        { time: "17:00", menu: "Cháo trứng toàn phần + rau cải" },
+      ]},
+      { day: "Chủ nhật", meals: [
+        { time: "10:00", menu: "Cháo thịt gà + nấm + cà rốt" },
+        { time: "17:00", menu: "Cháo yến mạch + táo nghiền" },
+      ]},
+    ],
+    notes: [
+      "Thêm 1 thìa dầu ăn (dầu oliu/dầu gấc) vào cháo.",
+      "Nghiền thô, có hạt — bé tập nhai.",
+      "Thử trứng toàn phần, hải sản — theo dõi dị ứng.",
+    ],
+  },
+  {
+    ageRange: "9–12 tháng",
+    emoji: "🍚",
+    title: "Ăn thô, finger food",
+    principle: "Cháo đặc/cơm nát, 3 bữa + bữa phụ. Bé tập tự xúc, ăn finger food.",
+    sampleDays: [
+      { day: "Thứ 2", meals: [
+        { time: "7:30", menu: "Cháo yến mạch + chuối + sữa" },
+        { time: "11:00", menu: "Cơm nát + thịt bò băm + bí xanh" },
+        { time: "14:30", menu: "Sữa chua + thanh long" },
+        { time: "17:30", menu: "Nui nhỏ + thịt gà xé + cà rốt" },
+      ]},
+      { day: "Thứ 3", meals: [
+        { time: "7:30", menu: "Bánh mì mềm + phô mai + bơ" },
+        { time: "11:00", menu: "Cơm nát + cá hồi áp chảo + rau cải" },
+        { time: "14:30", menu: "Trái cây: xoài + dưa hấu cắt que" },
+        { time: "17:30", menu: "Cháo đặc + tôm + bí đỏ" },
+      ]},
+      { day: "Thứ 4", meals: [
+        { time: "7:30", menu: "Pancake chuối yến mạch (finger food)" },
+        { time: "11:00", menu: "Cơm nát + thịt heo kho + đậu que" },
+        { time: "14:30", menu: "Khoai lang luộc cắt que" },
+        { time: "17:30", menu: "Soup rau + thịt gà + nui ống nhỏ" },
+      ]},
+      { day: "Thứ 5–CN", meals: [
+        { time: "Sáng", menu: "Bữa sáng nhẹ: cháo/bánh mì/pancake + trái cây" },
+        { time: "Trưa", menu: "Cơm nát/cháo đặc + protein + rau" },
+        { time: "Xế", menu: "Bữa phụ: sữa chua/trái cây/bánh quy homemade" },
+        { time: "Chiều", menu: "Bữa tương tự trưa, thay đổi protein" },
+      ]},
+    ],
+    notes: [
+      "Cắt thức ăn cỡ ngón tay mẹ để bé tự cầm.",
+      "Cho bé ăn cùng bàn với gia đình.",
+      "Vẫn bú mẹ/sữa 500–600ml/ngày.",
+      "Tránh: mật ong (trước 12 tháng), hạt tròn, nho nguyên quả (nguy cơ hóc).",
+    ],
+  },
+  {
+    ageRange: "12–24 tháng",
+    emoji: "🍽️",
+    title: "Ăn cùng gia đình",
+    principle: "Cơm mềm, thức ăn gia đình cắt nhỏ. 3 bữa chính + 2 bữa phụ.",
+    sampleDays: [
+      { day: "Thứ 2", meals: [
+        { time: "7:00", menu: "Phở gà nước trong + rau" },
+        { time: "9:30", menu: "Sữa chua + vài lát chuối" },
+        { time: "11:30", menu: "Cơm + trứng hấp + canh cải + thịt kho" },
+        { time: "14:30", menu: "Bánh flan + nước cam" },
+        { time: "17:30", menu: "Cơm + cá kho + đậu bắp luộc" },
+      ]},
+      { day: "Thứ 3", meals: [
+        { time: "7:00", menu: "Bún riêu + rau sống cắt nhỏ" },
+        { time: "9:30", menu: "Chuối + phô mai que" },
+        { time: "11:30", menu: "Cơm + thịt bò xào + rau muống" },
+        { time: "14:30", menu: "Khoai lang nướng + sữa" },
+        { time: "17:30", menu: "Cơm + canh bí đỏ + tôm rim" },
+      ]},
+      { day: "Thứ 4–CN", meals: [
+        { time: "Sáng", menu: "Bữa sáng Việt Nam: phở/bún/cháo/bánh cuốn" },
+        { time: "Giữa sáng", menu: "Bữa phụ: trái cây/sữa chua/bánh" },
+        { time: "Trưa", menu: "Cơm + protein + rau + canh" },
+        { time: "Xế chiều", menu: "Bữa phụ nhẹ" },
+        { time: "Tối", menu: "Cơm/súp + protein khác bữa trưa" },
+      ]},
+    ],
+    notes: [
+      "Nêm nhạt hơn khẩu phần người lớn (giảm 50% gia vị).",
+      "Từ 12 tháng: có thể dùng sữa tươi nguyên chất (pasteurized).",
+      "Cho bé tự xúc muỗng — bừa bộn là bình thường!",
+      "Đảm bảo đủ 4 nhóm thực phẩm: tinh bột, đạm, béo, vitamin-khoáng chất.",
+    ],
+  },
+];
+
+/* ========================================
+   CHECKLIST CHUẨN BỊ
+   ======================================== */
+export const checklistData: ChecklistGroup[] = [
+  {
+    stage: "Túi đồ đi sinh",
+    emoji: "🏥",
+    color: "#d4a0a7",
+    items: [
+      { name: "CMND/CCCD + sổ khám thai + BHYT", essential: true },
+      { name: "Quần áo mẹ sau sinh (2–3 bộ rộng)", essential: true },
+      { name: "Quần áo sơ sinh (3–5 bộ)", essential: true },
+      { name: "Bỉm sơ sinh (1 gói NB)", essential: true },
+      { name: "Khăn sữa/khăn xô (5–10 cái)", essential: true },
+      { name: "Mũ, bao tay, bao chân sơ sinh", essential: true },
+      { name: "Băng vệ sinh sau sinh (2 gói)", essential: true },
+      { name: "Bình sữa + sữa non (dự phòng)", essential: false },
+      { name: "Dầu massage bé", essential: false },
+      { name: "Máy ảnh/điện thoại sạc đầy", essential: false },
+      { name: "Đồ ăn nhẹ cho mẹ (bánh, nước, sữa)", essential: false },
+    ],
+  },
+  {
+    stage: "Đồ sơ sinh (0–3 tháng)",
+    emoji: "👶",
+    color: "#c8836a",
+    items: [
+      { name: "Quần áo sơ sinh body/liền (8–10 bộ)", essential: true },
+      { name: "Bỉm dán NB/S", essential: true },
+      { name: "Khăn sữa, khăn tắm (10–15 cái)", essential: true },
+      { name: "Nôi/cũi + đệm cứng (không gối)", essential: true },
+      { name: "Chăn/túi ngủ mỏng", essential: true },
+      { name: "Bồn tắm bé + nhiệt kế nước", essential: true },
+      { name: "Máy hút sữa (nếu cần)", essential: true },
+      { name: "Bình sữa + núm ti phù hợp", essential: true },
+      { name: "Máy tiệt trùng bình sữa", essential: false },
+      { name: "Gối chống trào ngược", essential: false },
+      { name: "Địu/wrap sơ sinh", essential: false },
+      { name: "Xe đẩy", essential: false },
+      { name: "Car seat (nếu có ô tô)", essential: false },
+    ],
+  },
+  {
+    stage: "Ăn dặm (5–6 tháng)",
+    emoji: "🥣",
+    color: "#b89a5e",
+    items: [
+      { name: "Ghế ăn dặm (highchair)", essential: true },
+      { name: "Bát, thìa mềm cho bé", essential: true },
+      { name: "Yếm ăn silicon/vải", essential: true },
+      { name: "Máy xay/rây nghiền thức ăn", essential: true },
+      { name: "Hộp trữ đông thức ăn dặm", essential: true },
+      { name: "Bình tập uống nước/cốc tập uống", essential: true },
+      { name: "Tấm lót sàn chống bẩn", essential: false },
+      { name: "Sách ăn dặm tham khảo", essential: false },
+    ],
+  },
+  {
+    stage: "Bé tập đi (9–18 tháng)",
+    emoji: "🚶",
+    color: "#6b9bd2",
+    items: [
+      { name: "Giày tập đi đế mềm", essential: true },
+      { name: "Rào chắn cầu thang/cửa", essential: true },
+      { name: "Nắp đậy ổ điện an toàn", essential: true },
+      { name: "Khoá tủ/ngăn kéo an toàn", essential: true },
+      { name: "Xe tập đi (push walker, KHÔNG dùng xe tròn)", essential: false },
+      { name: "Đồ chơi phát triển: xếp hình, lắp ráp", essential: false },
+      { name: "Sách vải/sách carton cho bé", essential: false },
+      { name: "Balo dây chống đi lạc", essential: false },
+    ],
+  },
+];
+
+/* ========================================
+   BẢNG GIẤC NGỦ CHUẨN
+   ======================================== */
+export const sleepChartData: SleepData[] = [
+  {
+    ageRange: "0–1 tháng",
+    emoji: "😴",
+    totalHours: "16–18h",
+    nightHours: "8–9h",
+    naps: "Nhiều giấc",
+    napDuration: "30 phút – 4 giờ",
+    tips: [
+      "Bé chưa phân biệt ngày đêm — hoàn toàn bình thường.",
+      "Ngủ ngửa, nệm cứng, không gối, không chăn phủ mặt.",
+      "Quấn chặt giúp bé ngủ yên, giảm giật mình.",
+    ],
+  },
+  {
+    ageRange: "1–3 tháng",
+    emoji: "🌙",
+    totalHours: "14–17h",
+    nightHours: "8–10h",
+    naps: "4–5 giấc",
+    napDuration: "30 phút – 2 giờ",
+    tips: [
+      "Bắt đầu phân biệt ngày/đêm: ban ngày mở rèm, đêm tối yên tĩnh.",
+      "Window thức: chỉ 45–90 phút rồi cần ngủ lại.",
+      "Bú đêm 2–3 lần là bình thường.",
+    ],
+  },
+  {
+    ageRange: "3–6 tháng",
+    emoji: "🌟",
+    totalHours: "13–15h",
+    nightHours: "9–11h",
+    naps: "3–4 giấc",
+    napDuration: "30 phút – 2 giờ",
+    tips: [
+      "Sleep regression 4 tháng: giấc ngủ thay đổi cấu trúc → tạm thời khó ngủ.",
+      "Bắt đầu xây bedtime routine ổn định.",
+      "Window thức: 1.5–2.5 giờ.",
+      "Tập tự ngủ: đặt xuống lúc buồn ngủ, không bế ngủ hoàn toàn.",
+    ],
+  },
+  {
+    ageRange: "6–9 tháng",
+    emoji: "💤",
+    totalHours: "12–15h",
+    nightHours: "10–12h",
+    naps: "2–3 giấc",
+    napDuration: "1–2 giờ",
+    tips: [
+      "Nhiều bé có thể ngủ xuyên đêm (6–8 giờ liền) ở giai đoạn này.",
+      "Bỏ giấc ngắn cuối chiều → 2 giấc/ngày.",
+      "Lo lắng xa cách (separation anxiety) có thể ảnh hưởng giấc ngủ.",
+      "Window thức: 2.5–3.5 giờ.",
+    ],
+  },
+  {
+    ageRange: "9–12 tháng",
+    emoji: "🛏️",
+    totalHours: "12–14h",
+    nightHours: "10–12h",
+    naps: "2 giấc",
+    napDuration: "1–1.5 giờ",
+    tips: [
+      "Giữ 2 giấc/ngày đến ~14–18 tháng.",
+      "Sleep regression 8–10 tháng, 12 tháng: do phát triển vận động + nhận thức.",
+      "Giờ ngủ đêm lý tưởng: 19:00–19:30.",
+      "Có thể bỏ bú đêm hoàn toàn (hỏi bác sĩ nếu cân nặng đạt chuẩn).",
+    ],
+  },
+  {
+    ageRange: "12–18 tháng",
+    emoji: "🌈",
+    totalHours: "11–14h",
+    nightHours: "10–12h",
+    naps: "1–2 giấc → 1 giấc",
+    napDuration: "1.5–2.5 giờ",
+    tips: [
+      "Chuyển từ 2 giấc xuống 1 giấc trưa: bé chống giấc sáng → bỏ dần.",
+      "Regression 18 tháng: bé muốn tự chủ, từ chối ngủ → kiên nhẫn giữ routine.",
+      "Window thức tăng: 4–5.5 giờ.",
+    ],
+  },
+  {
+    ageRange: "18–24 tháng",
+    emoji: "⭐",
+    totalHours: "11–14h",
+    nightHours: "10–12h",
+    naps: "1 giấc trưa",
+    napDuration: "1.5–2.5 giờ",
+    tips: [
+      "Giấc trưa thường 12:30–14:30 hoặc 13:00–15:00.",
+      "Bé bắt đầu 'trốn ngủ' vì muốn chơi — giữ giấc trưa đến 3 tuổi.",
+      "Chuyển từ cũi sang giường khi bé leo ra được (thường 2–3 tuổi).",
+      "Ác mộng bắt đầu xuất hiện — vỗ về, nói nhẹ nhàng, đèn ngủ nhạt.",
     ],
   },
 ];

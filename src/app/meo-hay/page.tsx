@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import { tips, devMilestones } from "@/lib/data";
 import Link from "next/link";
 import ShareButton from "@/components/ShareButton";
+
+export const metadata: Metadata = {
+  title: "Mẹo Hay Chăm Sóc Bé — 1000 Ngày Đầu Đời",
+  description: "22 mẹo hay từ chuyên gia về dinh dưỡng, giấc ngủ, phát triển và sức khoẻ cho bé trong 1000 ngày đầu đời.",
+  openGraph: {
+    title: "Mẹo Hay Cho Mẹ Bỉm",
+    description: "Tổng hợp mẹo chăm sóc bé từ chuyên gia nhi khoa.",
+  },
+};
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",

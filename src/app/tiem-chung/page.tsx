@@ -1,6 +1,16 @@
+import type { Metadata } from "next";
 import { vaccineSchedule } from "@/lib/data";
 import Link from "next/link";
 import ShareButton from "@/components/ShareButton";
+
+export const metadata: Metadata = {
+  title: "Lịch Tiêm Chủng Cho Bé — 1000 Ngày Đầu Đời",
+  description: "Lịch tiêm chủng đầy đủ theo khuyến cáo cho bé từ sơ sinh đến 2 tuổi. Vaccine cần thiết và thời điểm tiêm.",
+  openGraph: {
+    title: "Lịch Tiêm Chủng Cho Bé",
+    description: "Lịch tiêm phòng đầy đủ theo từng mốc tháng tuổi cho bé yêu.",
+  },
+};
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",

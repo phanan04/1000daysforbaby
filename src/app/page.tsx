@@ -1,6 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { stages } from "@/lib/data";
 import ShareButton from "@/components/ShareButton";
+import ScrollFade from "@/components/ScrollFade";
+
+export const metadata: Metadata = {
+  title: "1000 Ngày Đầu Đời — Hành Trình Chăm Sóc Bé Yêu",
+  description: "Hướng dẫn toàn diện chăm sóc bé trong 1000 ngày đầu đời, từ thai kỳ đến 2 tuổi. Dinh dưỡng, tiêm chủng, giấc ngủ, phát triển.",
+  openGraph: {
+    title: "1000 Ngày Đầu Đời",
+    description: "Hành trình từ thai kỳ đến 2 tuổi — giai đoạn vàng quyết định tương lai bé yêu.",
+    type: "website",
+  },
+};
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",
@@ -39,6 +51,7 @@ export default function Home() {
       </section>
 
       {/* 4 Giai đoạn */}
+      <ScrollFade>
       <section style={{ padding:"48px 20px 56px" }}>
         <div className="max-w-5xl mx-auto">
           <h2 style={{ fontWeight:800, fontSize:"1.5rem", color:"#3a3028", textAlign:"center", marginBottom:"28px" }}>
@@ -63,8 +76,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollFade>
 
       {/* Quick links */}
+      <ScrollFade delay={0.1}>
       <section style={{ padding:"0 20px 56px" }}>
         <div className="max-w-4xl mx-auto">
           {/* Divider + heading */}
@@ -75,14 +90,18 @@ export default function Home() {
             </h2>
             <div style={{ flex:1, height:"1px", background:"linear-gradient(to right, transparent, #c8beb5, transparent)" }} />
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
           {([
             { emoji:"🎂", label:"Tính tuổi bé", href:"/tinh-tuoi", color:"#c08890" },
-            { emoji:"📏", label:"Bảng tăng trưởng", href:"/bang-tang-truong", color:"#6b9bd2" },
-            { emoji:"💉", label:"Lịch tiêm chủng", href:"/tiem-chung", color:"#c8836a" },
-            { emoji:"💡", label:"Mẹo hay", href:"/meo-hay", color:"#b89a5e" },
+            { emoji:"📏", label:"Tăng trưởng", href:"/bang-tang-truong", color:"#6b9bd2" },
+            { emoji:"💉", label:"Tiêm chủng", href:"/tiem-chung", color:"#c8836a" },
+            { emoji:"📋", label:"Phương pháp EASY", href:"/phuong-phap-easy", color:"#6b7bb5" },
+            { emoji:"🍽️", label:"Thực đơn ăn dặm", href:"/thuc-don-an-dam", color:"#b89a5e" },
+            { emoji:"😴", label:"Giấc ngủ", href:"/giac-ngu", color:"#8b7bb5" },
+            { emoji:"✅", label:"Checklist", href:"/checklist", color:"#5d9a6e" },
+            { emoji:"💡", label:"Mẹo hay", href:"/meo-hay", color:"#c8836a" },
             { emoji:"❓", label:"Hỏi đáp", href:"/hoi-dap", color:"#d4a0a7" },
-            { emoji:"🤱", label:"Mẹ sau sinh", href:"/me-sau-sinh", color:"#5d9a6e" },
+            { emoji:"🤱", label:"Mẹ sau sinh", href:"/me-sau-sinh", color:"#d4a0a7" },
           ] as const).map((item) => (
             <Link key={item.href} href={item.href}
               style={{ ...neu, padding:"24px 16px", textAlign:"center", textDecoration:"none",
@@ -94,6 +113,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollFade>
 
       {/* Share */}
       <div style={{ textAlign:"center", paddingBottom:"48px" }}>
