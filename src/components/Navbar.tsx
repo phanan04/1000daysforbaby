@@ -10,6 +10,7 @@ const links = [
   { href:"/giai-doan/1-2-tuoi",   label:"1-2 Tuổi",   emoji:"🚶" },
   { href:"/tiem-chung",           label:"Tiêm Chủng",  emoji:"💉" },
   { href:"/meo-hay",              label:"Mẹo Hay",     emoji:"✨" },
+  { href:"/tinh-tuoi",            label:"Bé Của Tôi",  emoji:"🎂" },
 ];
 
 const navStyle: React.CSSProperties = {

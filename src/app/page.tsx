@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { stages, tips } from "@/lib/data";
+import ShareButton from "@/components/ShareButton";
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",
@@ -123,7 +124,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA - Calculator */}
+      <section style={{ padding:"0 20px 40px" }}>
+        <div className="max-w-3xl mx-auto">
+          <div style={{ ...neuLg, padding:"40px 32px", textAlign:"center",
+                        borderTop:"3px solid #d4a0a7" }}>
+            <div style={{ fontSize:"2.5rem", marginBottom:"12px" }}>🎂</div>
+            <h2 style={{ fontWeight:800, fontSize:"1.4rem", color:"#3a3028", marginBottom:"8px" }}>Bé Của Tôi</h2>
+            <p style={{ color:"#8c7b6e", fontSize:"0.9rem", marginBottom:"24px", lineHeight:1.6 }}>
+              Nhập ngày sinh để xem bé đang ở giai đoạn nào, mũi tiêm sắp tới và mốc phát triển cần chú ý.
+            </p>
+            <Link href="/tinh-tuoi" style={{ ...neu, display:"inline-block", padding:"12px 32px",
+                                              fontWeight:800, color:"#c08890", textDecoration:"none", borderRadius:"30px" }}>
+              Tính tuổi bé ngay →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA - Vaccine */}
       <section style={{ padding:"0 20px 64px" }}>
         <div className="max-w-3xl mx-auto">
           <div style={{ ...neuLg, padding:"40px 32px", textAlign:"center",
@@ -140,6 +159,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div style={{ textAlign:"center", padding:"0 20px 48px" }}>
+        <ShareButton title="1000 Ngày Đầu Đời" text="Hành trình chăm sóc bé yêu trong 1000 ngày đầu đời — từ thai kỳ đến 2 tuổi" />
+      </div>
     </div>
   );
 }

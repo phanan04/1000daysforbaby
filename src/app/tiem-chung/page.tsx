@@ -1,5 +1,6 @@
 import { vaccineSchedule } from "@/lib/data";
 import Link from "next/link";
+import ShareButton from "@/components/ShareButton";
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",
@@ -86,6 +87,10 @@ export default function TiemChung() {
             );
           })}
         </div>
+      </div>
+
+      <div style={{ textAlign:"center", padding:"24px 20px 0" }}>
+        <ShareButton title="Lịch Tiêm Chủng" text="Lịch tiêm chủng đầy đủ cho bé từ sơ sinh đến 2 tuổi" />
       </div>
     </div>
   );

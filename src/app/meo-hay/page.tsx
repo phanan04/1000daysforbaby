@@ -1,5 +1,6 @@
 import { tips, devMilestones } from "@/lib/data";
 import Link from "next/link";
+import ShareButton from "@/components/ShareButton";
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",
@@ -93,6 +94,10 @@ export default function MeoHay() {
             })}
           </div>
         </div>
+      </div>
+
+      <div style={{ textAlign:"center", padding:"24px 20px 0" }}>
+        <ShareButton title="Mẹo Hay Nuôi Con" text="Tổng hợp mẹo hay chăm sóc bé trong 1000 ngày đầu đời" />
       </div>
     </div>
   );
