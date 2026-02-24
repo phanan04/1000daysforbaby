@@ -301,3 +301,54 @@ export const devMilestones = [
   { age: "12–18 tháng", items: ["Đi vững", "Vốn từ 10–20 từ", "Chỉ vào đồ vật muốn", "Leo cầu thang"] },
   { age: "18–24 tháng", items: ["Chạy, nhảy", "Ghép 2 từ", "Vẽ nguệch ngoạc", "Chơi giả vờ (pretend play)"] },
 ];
+
+/* ------------------------------------------------------------------ */
+/* BẢNG TĂNG TRƯỞNG WHO (Median – p50)                               */
+/* Cân nặng (kg) & Chiều dài/cao (cm) theo tháng tuổi, 0–24 tháng   */
+/* Nguồn: WHO Child Growth Standards 2006                             */
+/* ------------------------------------------------------------------ */
+
+export interface GrowthDataPoint {
+  month: number;
+  label: string;         // "Sơ sinh", "1 tháng", …
+  boyWeight: number;     // kg – median (p50)
+  girlWeight: number;
+  boyHeight: number;     // cm – median (p50)
+  girlHeight: number;
+  boyWeightP3: number;   // percentile 3 (giới hạn dưới)
+  boyWeightP97: number;  // percentile 97 (giới hạn trên)
+  girlWeightP3: number;
+  girlWeightP97: number;
+  boyHeightP3: number;
+  boyHeightP97: number;
+  girlHeightP3: number;
+  girlHeightP97: number;
+}
+
+export const growthData: GrowthDataPoint[] = [
+  { month: 0,  label: "Sơ sinh",  boyWeight: 3.3,  girlWeight: 3.2,  boyHeight: 49.9, girlHeight: 49.1, boyWeightP3: 2.5, boyWeightP97: 4.3, girlWeightP3: 2.4, girlWeightP97: 4.2, boyHeightP3: 46.3, boyHeightP97: 53.4, girlHeightP3: 45.6, girlHeightP97: 52.7 },
+  { month: 1,  label: "1 tháng",  boyWeight: 4.5,  girlWeight: 4.2,  boyHeight: 54.7, girlHeight: 53.7, boyWeightP3: 3.4, boyWeightP97: 5.8, girlWeightP3: 3.2, girlWeightP97: 5.5, boyHeightP3: 51.1, boyHeightP97: 58.4, girlHeightP3: 50.0, girlHeightP97: 57.4 },
+  { month: 2,  label: "2 tháng",  boyWeight: 5.6,  girlWeight: 5.1,  boyHeight: 58.4, girlHeight: 57.1, boyWeightP3: 4.3, boyWeightP97: 7.1, girlWeightP3: 3.9, girlWeightP97: 6.6, boyHeightP3: 54.7, boyHeightP97: 62.2, girlHeightP3: 53.2, girlHeightP97: 61.1 },
+  { month: 3,  label: "3 tháng",  boyWeight: 6.4,  girlWeight: 5.8,  boyHeight: 61.4, girlHeight: 59.8, boyWeightP3: 5.0, boyWeightP97: 8.0, girlWeightP3: 4.5, girlWeightP97: 7.5, boyHeightP3: 57.6, boyHeightP97: 65.3, girlHeightP3: 55.8, girlHeightP97: 63.8 },
+  { month: 4,  label: "4 tháng",  boyWeight: 7.0,  girlWeight: 6.4,  boyHeight: 63.9, girlHeight: 62.1, boyWeightP3: 5.6, boyWeightP97: 8.7, girlWeightP3: 5.0, girlWeightP97: 8.2, boyHeightP3: 60.0, boyHeightP97: 67.8, girlHeightP3: 58.0, girlHeightP97: 66.2 },
+  { month: 5,  label: "5 tháng",  boyWeight: 7.5,  girlWeight: 6.9,  boyHeight: 65.9, girlHeight: 64.0, boyWeightP3: 6.0, boyWeightP97: 9.3, girlWeightP3: 5.4, girlWeightP97: 8.8, boyHeightP3: 61.9, boyHeightP97: 69.9, girlHeightP3: 59.9, girlHeightP97: 68.2 },
+  { month: 6,  label: "6 tháng",  boyWeight: 7.9,  girlWeight: 7.3,  boyHeight: 67.6, girlHeight: 65.7, boyWeightP3: 6.4, boyWeightP97: 9.8, girlWeightP3: 5.7, girlWeightP97: 9.3, boyHeightP3: 63.6, boyHeightP97: 71.6, girlHeightP3: 61.5, girlHeightP97: 70.0 },
+  { month: 7,  label: "7 tháng",  boyWeight: 8.3,  girlWeight: 7.6,  boyHeight: 69.2, girlHeight: 67.3, boyWeightP3: 6.7, boyWeightP97: 10.2, girlWeightP3: 6.0, girlWeightP97: 9.8, boyHeightP3: 65.1, boyHeightP97: 73.2, girlHeightP3: 63.0, girlHeightP97: 71.6 },
+  { month: 8,  label: "8 tháng",  boyWeight: 8.6,  girlWeight: 7.9,  boyHeight: 70.6, girlHeight: 68.7, boyWeightP3: 6.9, boyWeightP97: 10.7, girlWeightP3: 6.3, girlWeightP97: 10.2, boyHeightP3: 66.5, boyHeightP97: 74.7, girlHeightP3: 64.3, girlHeightP97: 73.2 },
+  { month: 9,  label: "9 tháng",  boyWeight: 8.9,  girlWeight: 8.2,  boyHeight: 72.0, girlHeight: 70.1, boyWeightP3: 7.1, boyWeightP97: 11.0, girlWeightP3: 6.5, girlWeightP97: 10.5, boyHeightP3: 67.7, boyHeightP97: 76.2, girlHeightP3: 65.6, girlHeightP97: 74.7 },
+  { month: 10, label: "10 tháng", boyWeight: 9.2,  girlWeight: 8.5,  boyHeight: 73.3, girlHeight: 71.5, boyWeightP3: 7.4, boyWeightP97: 11.4, girlWeightP3: 6.7, girlWeightP97: 10.9, boyHeightP3: 69.0, boyHeightP97: 77.6, girlHeightP3: 66.8, girlHeightP97: 76.1 },
+  { month: 11, label: "11 tháng", boyWeight: 9.4,  girlWeight: 8.7,  boyHeight: 74.5, girlHeight: 72.8, boyWeightP3: 7.6, boyWeightP97: 11.7, girlWeightP3: 6.9, girlWeightP97: 11.2, boyHeightP3: 70.2, boyHeightP97: 78.9, girlHeightP3: 68.0, girlHeightP97: 77.5 },
+  { month: 12, label: "12 tháng", boyWeight: 9.6,  girlWeight: 8.9,  boyHeight: 75.7, girlHeight: 74.0, boyWeightP3: 7.7, boyWeightP97: 12.0, girlWeightP3: 7.0, girlWeightP97: 11.5, boyHeightP3: 71.3, boyHeightP97: 80.2, girlHeightP3: 69.2, girlHeightP97: 78.9 },
+  { month: 13, label: "13 tháng", boyWeight: 9.9,  girlWeight: 9.2,  boyHeight: 76.9, girlHeight: 75.2, boyWeightP3: 7.9, boyWeightP97: 12.3, girlWeightP3: 7.2, girlWeightP97: 11.8, boyHeightP3: 72.4, boyHeightP97: 81.3, girlHeightP3: 70.3, girlHeightP97: 80.2 },
+  { month: 14, label: "14 tháng", boyWeight: 10.1, girlWeight: 9.4,  boyHeight: 78.0, girlHeight: 76.4, boyWeightP3: 8.1, boyWeightP97: 12.6, girlWeightP3: 7.4, girlWeightP97: 12.1, boyHeightP3: 73.4, boyHeightP97: 82.5, girlHeightP3: 71.3, girlHeightP97: 81.4 },
+  { month: 15, label: "15 tháng", boyWeight: 10.3, girlWeight: 9.6,  boyHeight: 79.1, girlHeight: 77.5, boyWeightP3: 8.3, boyWeightP97: 12.8, girlWeightP3: 7.6, girlWeightP97: 12.4, boyHeightP3: 74.4, boyHeightP97: 83.6, girlHeightP3: 72.4, girlHeightP97: 82.7 },
+  { month: 16, label: "16 tháng", boyWeight: 10.5, girlWeight: 9.8,  boyHeight: 80.2, girlHeight: 78.6, boyWeightP3: 8.4, boyWeightP97: 13.1, girlWeightP3: 7.7, girlWeightP97: 12.6, boyHeightP3: 75.4, boyHeightP97: 84.8, girlHeightP3: 73.3, girlHeightP97: 83.9 },
+  { month: 17, label: "17 tháng", boyWeight: 10.7, girlWeight: 10.0, boyHeight: 81.2, girlHeight: 79.7, boyWeightP3: 8.6, boyWeightP97: 13.4, girlWeightP3: 7.9, girlWeightP97: 12.9, boyHeightP3: 76.3, boyHeightP97: 85.9, girlHeightP3: 74.3, girlHeightP97: 85.0 },
+  { month: 18, label: "18 tháng", boyWeight: 10.9, girlWeight: 10.2, boyHeight: 82.3, girlHeight: 80.7, boyWeightP3: 8.8, boyWeightP97: 13.7, girlWeightP3: 8.1, girlWeightP97: 13.2, boyHeightP3: 77.2, boyHeightP97: 87.0, girlHeightP3: 75.2, girlHeightP97: 86.1 },
+  { month: 19, label: "19 tháng", boyWeight: 11.1, girlWeight: 10.4, boyHeight: 83.2, girlHeight: 81.7, boyWeightP3: 8.9, boyWeightP97: 13.9, girlWeightP3: 8.2, girlWeightP97: 13.5, boyHeightP3: 78.0, boyHeightP97: 88.1, girlHeightP3: 76.1, girlHeightP97: 87.2 },
+  { month: 20, label: "20 tháng", boyWeight: 11.3, girlWeight: 10.6, boyHeight: 84.2, girlHeight: 82.7, boyWeightP3: 9.1, boyWeightP97: 14.2, girlWeightP3: 8.4, girlWeightP97: 13.7, boyHeightP3: 78.9, boyHeightP97: 89.2, girlHeightP3: 77.0, girlHeightP97: 88.3 },
+  { month: 21, label: "21 tháng", boyWeight: 11.5, girlWeight: 10.9, boyHeight: 85.1, girlHeight: 83.7, boyWeightP3: 9.2, boyWeightP97: 14.5, girlWeightP3: 8.6, girlWeightP97: 14.0, boyHeightP3: 79.7, boyHeightP97: 90.2, girlHeightP3: 77.9, girlHeightP97: 89.4 },
+  { month: 22, label: "22 tháng", boyWeight: 11.8, girlWeight: 11.1, boyHeight: 86.0, girlHeight: 84.6, boyWeightP3: 9.4, boyWeightP97: 14.7, girlWeightP3: 8.7, girlWeightP97: 14.3, boyHeightP3: 80.5, boyHeightP97: 91.2, girlHeightP3: 78.7, girlHeightP97: 90.4 },
+  { month: 23, label: "23 tháng", boyWeight: 12.0, girlWeight: 11.3, boyHeight: 86.9, girlHeight: 85.5, boyWeightP3: 9.5, boyWeightP97: 15.0, girlWeightP3: 8.9, girlWeightP97: 14.6, boyHeightP3: 81.3, boyHeightP97: 92.2, girlHeightP3: 79.6, girlHeightP97: 91.4 },
+  { month: 24, label: "24 tháng", boyWeight: 12.2, girlWeight: 11.5, boyHeight: 87.8, girlHeight: 86.4, boyWeightP3: 9.7, boyWeightP97: 15.3, girlWeightP3: 9.0, girlWeightP97: 14.8, boyHeightP3: 82.1, boyHeightP97: 93.2, girlHeightP3: 80.4, girlHeightP97: 92.4 },
+];

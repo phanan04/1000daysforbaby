@@ -60,11 +60,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Quick links – gộp 3 CTA thành 1 row */}
+      {/* Quick links */}
       <section style={{ padding:"0 20px 56px" }}>
-        <div className="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4">
           {([
             { emoji:"🎂", label:"Tính tuổi bé", href:"/tinh-tuoi", color:"#c08890" },
+            { emoji:"📏", label:"Bảng tăng trưởng", href:"/bang-tang-truong", color:"#6b9bd2" },
             { emoji:"💉", label:"Lịch tiêm chủng", href:"/tiem-chung", color:"#c8836a" },
             { emoji:"💡", label:"Mẹo hay", href:"/meo-hay", color:"#b89a5e" },
           ] as const).map((item) => (
