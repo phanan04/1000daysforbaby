@@ -44,15 +44,19 @@ export default function Home() {
           <h2 style={{ fontWeight:800, fontSize:"1.5rem", color:"#3a3028", textAlign:"center", marginBottom:"28px" }}>
             4 Giai Đoạn Quan Trọng
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
             {stages.map((s, i) => (
               <Link key={s.slug} href={`/giai-doan/${s.slug}`} style={{ textDecoration:"none" }}>
-                <div style={{ ...neu, padding:"24px 20px", cursor:"pointer",
-                              borderTop:`3px solid ${stageColor[i]}` }}>
-                  <div style={{ fontSize:"2.2rem", marginBottom:"10px" }}>{s.emoji}</div>
-                  <div style={{ fontWeight:800, fontSize:"0.95rem", color:"#3a3028", marginBottom:"6px" }}>{s.title}</div>
-                  <div style={{ fontSize:"0.72rem", fontWeight:700, color:stageColor[i], marginBottom:"8px" }}>{s.weeks}</div>
-                  <p style={{ fontSize:"0.78rem", color:"#8c7b6e", lineHeight:1.55 }}>{s.heroDesc}</p>
+                <div style={{ ...neu, padding:"18px 14px", cursor:"pointer",
+                              borderTop:`3px solid ${stageColor[i]}` }}
+                     className="sm:!p-[24px_20px]">
+                  <div style={{ fontSize:"2rem", marginBottom:"8px" }} className="sm:text-[2.2rem]">{s.emoji}</div>
+                  <div style={{ fontWeight:800, fontSize:"0.85rem", color:"#3a3028", marginBottom:"4px" }}
+                       className="sm:text-[0.95rem]">{s.title}</div>
+                  <div style={{ fontSize:"0.68rem", fontWeight:700, color:stageColor[i], marginBottom:"6px" }}
+                       className="sm:text-[0.72rem]">{s.weeks}</div>
+                  <p style={{ fontSize:"0.78rem", color:"#8c7b6e", lineHeight:1.55 }}
+                     className="hidden sm:block">{s.heroDesc}</p>
                 </div>
               </Link>
             ))}

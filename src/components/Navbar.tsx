@@ -52,26 +52,26 @@ export default function Navbar() {
           </div>
         </Link>
 
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden xl:flex items-center gap-1 flex-wrap justify-end">
           {links.map(l => (
             <Link key={l.href} href={l.href}
-              className="flex items-center gap-1 no-underline"
-              style={{ background:"#eae6e1", borderRadius:"30px", padding:"6px 14px",
-                       fontSize:"0.82rem", fontWeight:700, color:"#c08890",
+              className="no-underline whitespace-nowrap"
+              style={{ background:"#eae6e1", borderRadius:"30px", padding:"5px 12px",
+                       fontSize:"0.78rem", fontWeight:700, color:"#c08890",
                        boxShadow:"3px 3px 8px rgba(180,170,155,0.6),-3px -3px 8px rgba(255,255,255,0.85)",
                        transition:"box-shadow 0.15s" }}>
-              <span>{l.emoji}</span><span>{l.label}</span>
+              {l.label}
             </Link>
           ))}
         </nav>
 
-        <button className="lg:hidden" style={menuBtnStyle} onClick={() => setOpen(!open)} aria-label="menu">
+        <button className="xl:hidden" style={menuBtnStyle} onClick={() => setOpen(!open)} aria-label="menu">
           {open ? <X size={18}/> : <Menu size={18}/>}
         </button>
       </div>
 
       {open && (
-        <div className="lg:hidden px-5 pb-4">
+        <div className="xl:hidden px-5 pb-4">
           <div style={{ background:"#eae6e1", borderRadius:"16px",
                         boxShadow:"inset 4px 4px 10px rgba(180,170,155,0.6),inset -4px -4px 10px rgba(255,255,255,0.85)",
                         padding:"12px" }}>
