@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Dev: baby-1000days",
+			"type": "shell",
+			"command": "cd d:\\pet-project\\baby-1000days && npm run dev",
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}
