@@ -87,6 +87,19 @@ export const stages: Stage[] = [
           "Đặt phòng và chọn cơ sở y tế phù hợp điều kiện gia đình.",
         ],
       },
+      {
+        title: "🚨 Khi nào cần đến bệnh viện ngay?",
+        icon: "⚠️",
+        items: [
+          "Ra máu âm đạo bất thường, đặc biệt 3 tháng đầu hoặc 3 tháng cuối.",
+          "Đau bụng dữ dội, co thắt tử cung liên tục trước 37 tuần.",
+          "Vỡ ối sớm (ra nước ào ạt hoặc rỉ rả liên tục).",
+          "Thai ít đạp hoặc không đạp (dưới 10 lần trong 2 giờ khi đếm từ tuần 28).",
+          "Phù mặt/tay đột ngột, nhức đầu dữ dội, nhìn mờ – nghi tiền sản giật.",
+          "Sốt > 38°C kèm ớn lạnh, có thể là dấu hiệu nhiễm trùng.",
+          "Nôn ói liên tục không ngừng, không ăn uống được gì.",
+        ],
+      },
     ],
   },
   {
@@ -145,6 +158,20 @@ export const stages: Stage[] = [
           "Liên hệ bác sĩ ngay nếu bé sốt > 38°C (đặc biệt dưới 3 tháng tuổi).",
         ],
       },
+      {
+        title: "🚨 Khi nào cần đến bệnh viện ngay?",
+        icon: "⚠️",
+        items: [
+          "Sốt ≥ 38°C ở trẻ dưới 3 tháng tuổi (bất kể biểu hiện nào).",
+          "Bỏ bú hoàn toàn > 8 tiếng, lờ đờ, khó đánh thức.",
+          "Thở nhanh (> 60 lần/phút), thở rít, rút lõm lồng ngực.",
+          "Da tím tái, xanh xao bất thường, vàng da lan nhanh.",
+          "Co giật, mắt trợn, cơ thể cứng đờ hoặc run rẩy bất thường.",
+          "Nôn ói nhiều lần liên tiếp, phân có máu hoặc phân đen.",
+          "Rốn sưng đỏ, chảy mủ, có mùi hôi – nghi nhiễm trùng rốn.",
+          "Khóc liên tục > 3 tiếng không dỗ được, kèm bụng chướng.",
+        ],
+      },
     ],
   },
   {
@@ -200,6 +227,19 @@ export const stages: Stage[] = [
           "Xây dựng thói quen buổi tối: tắm > ăn > hát ru > đặt bé xuống.",
           "Bắt đầu dạy bé tự ngủ không cần bế: đặt xuống khi buồn ngủ nhưng vẫn thức.",
           "Tháng 9–10: bé có thể thức đêm nhiều hơn do mọc răng – dùng gel nướu lạnh.",
+        ],
+      },
+      {
+        title: "🚨 Khi nào cần đến bệnh viện ngay?",
+        icon: "⚠️",
+        items: [
+          "Sốt > 38.5°C kéo dài trên 24h hoặc kèm phát ban.",
+          "Tiêu chảy > 6 lần/ngày hoặc phân có máu/nhầy.",
+          "Nôn ói liên tục, bỏ ăn hoàn toàn, mắt trũng, da nhăn (mất nước).",
+          "Thở khò khè nặng, tím tái quanh môi khi bú hoặc khóc.",
+          "Bé ngã/va đập đầu mạnh, sau đó nôn hoặc lơ mơ bất thường.",
+          "Sặc thức ăn, nghẹn: bé tím tái, không thể khóc/phát âm.",
+          "Phát ban lan nhanh kèm sốt – có thể phản ứng dị ứng nghiêm trọng.",
         ],
       },
     ],
@@ -261,6 +301,20 @@ export const stages: Stage[] = [
           "Duy trì thói quen sinh hoạt ổn định giúp bé an tâm và ít cáu kỉnh hơn.",
         ],
       },
+      {
+        title: "🚨 Khi nào cần đến bệnh viện ngay?",
+        icon: "⚠️",
+        items: [
+          "Sốt > 39°C không hạ sau khi dùng thuốc, hoặc sốt kéo dài > 3 ngày.",
+          "Co giật do sốt (sốt cao co giật): mắt trợn, tay chân co cứng.",
+          "Khó thở, thở rít, rút lõm lồng ngực, tím tái môi.",
+          "Uống/nuốt phải chất tẩy rửa, thuốc hoặc vật nhỏ (nguy cơ ngộ độc/nghẹn).",
+          "Tiêu chảy nặng kèm nôn, không uống được nước – nguy cơ mất nước.",
+          "Bé đột ngột đi loạng choạng, mất thăng bằng hoặc ngã liên tục.",
+          "Phát ban dạng ban xuất huyết (ấn không mất), kèm sốt – nghi sốt xuất huyết.",
+          "Bé tự kỷ/chậm nói: 18 tháng không nói từ nào, không giao tiếp mắt, không chỉ tay.",
+        ],
+      },
     ],
   },
 ];
@@ -276,6 +330,18 @@ export const tips: Tip[] = [
   { id: 8, title: "Tummy time đúng cách từ sơ sinh", content: "Bắt đầu từ 1–2 phút, 2–3 lần/ngày khi bé tỉnh táo và no. Tăng dần lên 30 phút tổng cộng mỗi ngày ở tháng 4. Có thể đặt bé nằm sấp lên ngực mẹ/ba thay vì sàn. Giúp phát triển cơ cổ, vai, phòng đầu bẹt.", category: "Phát triển", emoji: "🤸", tag: "0–6 tháng" },
   { id: 9, title: "Cách hạ sốt an toàn cho trẻ nhỏ", content: "Bé sốt > 38°C: cởi bớt quần áo, chườm ấm (không chườm lạnh). Paracetamol 10–15mg/kg liều nếu bé khó chịu. Dưới 3 tháng sốt bất cứ mức nào → đến bệnh viện. Không dùng aspirin cho trẻ em.", category: "Sức khoẻ", emoji: "🌡️", tag: "0–2 tuổi" },
   { id: 10, title: "Giảm lo lắng sau sinh cho mẹ", content: "Baby blues (2 tuần đầu) khác với trầm cảm sau sinh (kéo dài hơn 2 tuần, ảnh hưởng chức năng). Hãy nhờ sự giúp đỡ, chia sẻ với bạn đời, kết nối với các mẹ khác. Không có mẹ hoàn hảo – 'good enough mother' là đủ rồi!", category: "Sức khoẻ mẹ", emoji: "💆‍♀️", tag: "Cho mẹ" },
+  { id: 11, title: "Cách tắm sơ sinh an toàn từ A-Z", content: "Phòng kín gió, nước 37–38°C (thử bằng khuỷu tay). Đỡ đầu bé bằng cẳng tay. Tắm nhanh 5–7 phút. Trình tự: mặt → đầu → thân → tay chân → vùng kín. Lau khô ngay, mặc đồ ấm.", category: "Chăm sóc", emoji: "🛁", tag: "0–6 tháng" },
+  { id: 12, title: "Xử lý sặc sữa ở trẻ sơ sinh", content: "Đặt bé nằm nghiêng, vỗ nhẹ lưng từ dưới lên. Nếu bé tím tái/ngừng thở: úp bé lên cẳng tay, vỗ 5 cái giữa hai bả vai. Gọi 115 ngay. Phòng ngừa: bế đầu cao khi bú, vỗ ợ sau bú.", category: "Sơ cứu", emoji: "🆘", tag: "0–12 tháng" },
+  { id: 13, title: "Bé bị nghẹt mũi – xử lý không cần thuốc", content: "Nhỏ 2–3 giọt nước muối sinh lý (NaCl 0.9%) vào mỗi bên mũi. Dùng bóng hút mũi nhẹ nhàng. Kê đầu bé cao hơn khi ngủ. Bật máy tạo ẩm trong phòng. Bú mẹ nhiều hơn để giữ ẩm niêm mạc.", category: "Sức khoẻ", emoji: "🤧", tag: "0–2 tuổi" },
+  { id: 14, title: "Massage cho bé – kết nối và thư giãn", content: "Dùng dầu dừa/olive, vuốt nhẹ: chân → bụng (xoay kim đồng hồ giảm đầy hơi) → ngực → tay → lưng. Thời điểm tốt: sau tắm hoặc trước ngủ. 10–15 phút/lần. Ngừng nếu bé quấy.", category: "Chăm sóc", emoji: "💆", tag: "0–12 tháng" },
+  { id: 15, title: "Giúp bé tự ngủ xuyên đêm", content: "Tạo ritual buổi tối cố định (tắm, đọc sách, hát ru). Đặt bé xuống khi buồn ngủ nhưng chưa ngủ hẳn. Không bế/ru lại ngay khi bé ọ ẹ – chờ 1–2 phút. Tránh cho bú rồi ngủ luôn (tạo thói quen phụ thuộc).", category: "Ngủ", emoji: "🌙", tag: "4–12 tháng" },
+  { id: 16, title: "Phòng tránh tai nạn trong nhà cho trẻ tập bò/đi", content: "Che ổ điện, khóa tủ có hoá chất, chặn cầu thang. Để dao kéo/đồ nóng ngoài tầm với. Kiểm tra đồ chơi không có chi tiết nhỏ (nguy cơ hóc). Không để bé một mình gần nước (bồn tắm, xô nước).", category: "An toàn", emoji: "🔒", tag: "6–24 tháng" },
+  { id: 17, title: "BLW – ăn dặm bé tự chỉ huy", content: "Baby-Led Weaning: cho bé tự cầm thức ăn cắt thanh dài (khoai lang, bông cải, chuối) thay vì đút bột. Chờ bé tròn 6 tháng + ngồi vững. Ưu điểm: phát triển vận động tinh, tự điều chỉnh lượng ăn. Luôn giám sát khi ăn.", category: "Ăn dặm", emoji: "🥕", tag: "6–12 tháng" },
+  { id: 18, title: "Khi nào bé cần bổ sung vitamin D?", content: "WHO khuyến cáo: bé bú mẹ hoàn toàn nên bổ sung 400 IU vitamin D3/ngày từ lúc sinh. Bé bú công thức > 500ml/ngày thường đã đủ. Tắm nắng buổi sáng (7–9h) 15–20 phút cũng giúp tổng hợp vitamin D tự nhiên.", category: "Dinh dưỡng", emoji: "☀️", tag: "0–24 tháng" },
+  { id: 19, title: "Dấu hiệu mọc răng & cách giảm đau", content: "Bé chảy dãi nhiều, cắn đồ, quấy khóc, có thể sốt nhẹ < 38°C. Giảm đau: cho gặm vòng nướu lạnh (không đông đá), dùng gel nướu teething. Răng sữa thường mọc từ tháng 6, hoàn thành 20 răng lúc 2–3 tuổi.", category: "Sức khoẻ", emoji: "🦷", tag: "6–24 tháng" },
+  { id: 20, title: "Chọn đồ chơi theo giai đoạn phát triển", content: "0–3 tháng: mobile, đồ chơi đen trắng tương phản. 3–6 tháng: xúc xắc, vòng gặm. 6–12 tháng: khối xếp, sách vải, bóng. 12–24 tháng: đồ chơi lồng, xếp hình đơn giản, bút sáp, đất nặn. Chất liệu an toàn, không chi tiết nhỏ.", category: "Phát triển", emoji: "🧸", tag: "0–2 tuổi" },
+  { id: 21, title: "Cách vệ sinh bình sữa đúng chuẩn", content: "Rửa ngay sau khi bú bằng nước nóng + nước rửa bình. Dùng cọ chuyên dụng cọ kỹ đáy và núm. Tiệt trùng: hấp trong nước sôi 5 phút hoặc máy tiệt trùng UV/hơi nước. Phơi khô trên giá sạch, không dùng khăn lau bên trong.", category: "Chăm sóc", emoji: "🍼", tag: "0–12 tháng" },
+  { id: 22, title: "Mẹ bỉm – đừng quên chăm sóc bản thân", content: "Tận dụng giấc ngủ khi bé ngủ. Nhờ ông bà/chồng trông bé 1–2 giờ để nghỉ ngơi. Ăn đủ bữa, uống đủ nước. Nếu cảm thấy buồn bã, kiệt sức kéo dài > 2 tuần – hãy nói chuyện với bác sĩ. Mẹ khoẻ thì bé mới khoẻ.", category: "Sức khoẻ mẹ", emoji: "❤️‍🩹", tag: "Cho mẹ" },
 ];
 
 export const vaccineSchedule: VaccineItem[] = [
@@ -351,4 +417,118 @@ export const growthData: GrowthDataPoint[] = [
   { month: 22, label: "22 tháng", boyWeight: 11.8, girlWeight: 11.1, boyHeight: 86.0, girlHeight: 84.6, boyWeightP3: 9.4, boyWeightP97: 14.7, girlWeightP3: 8.7, girlWeightP97: 14.3, boyHeightP3: 80.5, boyHeightP97: 91.2, girlHeightP3: 78.7, girlHeightP97: 90.4 },
   { month: 23, label: "23 tháng", boyWeight: 12.0, girlWeight: 11.3, boyHeight: 86.9, girlHeight: 85.5, boyWeightP3: 9.5, boyWeightP97: 15.0, girlWeightP3: 8.9, girlWeightP97: 14.6, boyHeightP3: 81.3, boyHeightP97: 92.2, girlHeightP3: 79.6, girlHeightP97: 91.4 },
   { month: 24, label: "24 tháng", boyWeight: 12.2, girlWeight: 11.5, boyHeight: 87.8, girlHeight: 86.4, boyWeightP3: 9.7, boyWeightP97: 15.3, girlWeightP3: 9.0, girlWeightP97: 14.8, boyHeightP3: 82.1, boyHeightP97: 93.2, girlHeightP3: 80.4, girlHeightP97: 92.4 },
+];
+
+/* ------------------------------------------------------------------ */
+/* FAQ - CÂU HỎI THƯỜNG GẶP                                          */
+/* ------------------------------------------------------------------ */
+
+export interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+  category: string;
+  emoji: string;
+}
+
+export const faqData: FAQItem[] = [
+  { id: 1, question: "Bé bú mẹ hoàn toàn có cần uống thêm nước không?", answer: "Không. Sữa mẹ chứa ~88% nước, đủ cung cấp cho bé dưới 6 tháng ngay cả trong thời tiết nóng. Uống nước trước 6 tháng có thể làm bé bú ít sữa, dẫn đến thiếu dinh dưỡng. Sau 6 tháng khi bắt đầu ăn dặm, cho bé tập uống nước từ cốc.", category: "Dinh dưỡng", emoji: "💧" },
+  { id: 2, question: "Bé khóc đêm liên tục có sao không?", answer: "Khóc đêm ở sơ sinh là bình thường (chu kỳ ngủ chưa ổn định). Tuy nhiên nếu bé khóc dữ dội > 3 tiếng/ngày, > 3 ngày/tuần, kéo dài > 3 tuần → có thể là colic (đau bụng co thắt), nên khám bác sĩ. Kiểm tra: đói, tã ướt, nóng/lạnh, ốm trước khi lo lắng.", category: "Giấc ngủ", emoji: "😭" },
+  { id: 3, question: "Khi nào nên cai sữa mẹ?", answer: "WHO khuyến cáo bú mẹ hoàn toàn 6 tháng đầu, tiếp tục bú kết hợp ăn dặm đến ít nhất 2 tuổi. Cai sữa nên từ từ (giảm 1 cữ bú mỗi 3–5 ngày) để tránh tắc sữa cho mẹ và shock cho bé. Thời điểm cai tuỳ thuộc vào mẹ và bé.", category: "Dinh dưỡng", emoji: "🤱" },
+  { id: 4, question: "Bé ngủ ngáy có bình thường không?", answer: "Ngáy nhẹ, thỉnh thoảng khi bé nghẹt mũi là bình thường. Ngáy to, đều đặn mỗi đêm, kèm ngừng thở tạm thời (ngưng thở khi ngủ – OSA) cần khám ngay. Nguyên nhân phổ biến: VA/amidan quá phát, dị ứng, thừa cân.", category: "Giấc ngủ", emoji: "😴" },
+  { id: 5, question: "Bé mấy tháng thì mọc răng?", answer: "Trung bình 6–7 tháng, nhưng sớm nhất có thể 3 tháng, muộn nhất 14 tháng – đều bình thường. Thường mọc răng cửa dưới trước. 20 răng sữa hoàn thành lúc 2.5–3 tuổi. Lo lắng nếu 18 tháng chưa mọc răng nào → khám nha khoa.", category: "Phát triển", emoji: "🦷" },
+  { id: 6, question: "Bé bị vàng da sơ sinh có nguy hiểm không?", answer: "Vàng da sinh lý (xuất hiện ngày 2–3, giảm dần sau 1–2 tuần) khá phổ biến và thường không nguy hiểm. Vàng da bệnh lý: xuất hiện trong 24h đầu, vàng lan nhanh đến tay chân, bé lừ đừ, bú kém → cần chiếu đèn hoặc thay máu. Khám ngay nếu nghi ngờ.", category: "Sức khoẻ", emoji: "💛" },
+  { id: 7, question: "Có nên cho bé dùng ti giả không?", answer: "Ti giả giúp bé tự trấn an, giảm nguy cơ SIDS (đột tử). Tuy nhiên không nên dùng trước 4–6 tuần (ảnh hưởng bú mẹ). Nên cai trước 2 tuổi để tránh ảnh hưởng khớp cắn. Chọn loại silicone, vệ sinh thường xuyên.", category: "Chăm sóc", emoji: "👶" },
+  { id: 8, question: "Bé bị chàm sữa (viêm da cơ địa) xử lý thế nào?", answer: "Dưỡng ẩm da 2–3 lần/ngày bằng kem không hương liệu (cetaphil, eucerin). Tắm nhanh 5–10 phút bằng nước ấm, tránh xà phòng mạnh. Cắt ngắn móng tay bé để tránh gãi. Nếu nặng (da nứt, chảy nước, nhiễm trùng) → bác sĩ da liễu kê kem steroid phù hợp.", category: "Sức khoẻ", emoji: "🧴" },
+  { id: 9, question: "Có cần cho bé uống vitamin tổng hợp không?", answer: "Bé bú mẹ: bổ sung vitamin D 400 IU/ngày (sữa mẹ thiếu vitamin D). Bé bú công thức > 500ml/ngày thường đã đủ. Sắt: bổ sung từ tháng 4–6 nếu bú mẹ hoàn toàn. Vitamin A: theo chương trình quốc gia (6 tháng & 12 tháng). Không cần vitamin tổng hợp nếu bé ăn đa dạng.", category: "Dinh dưỡng", emoji: "💊" },
+  { id: 10, question: "Bé chậm nói có phải tự kỷ không?", answer: "Chậm nói ≠ tự kỷ. Nhiều bé chậm nói nhưng phát triển bình thường. Dấu hiệu nghi tự kỷ: không giao tiếp mắt, không chỉ tay, không phản ứng khi gọi tên, chơi lặp đi lặp lại. Chậm nói đơn thuần: bé vẫn giao tiếp phi ngôn ngữ tốt. Khám nếu 18 tháng không nói, 24 tháng < 50 từ.", category: "Phát triển", emoji: "💬" },
+  { id: 11, question: "Bé đi phân xanh/có nhầy có sao không?", answer: "Phân xanh do: sữa đầu (foremilk) nhiều hơn sữa cuối, bổ sung sắt, hoặc thức ăn dặm xanh. Phân có nhầy ít: bình thường (nước bọt nuốt nhiều). Cần khám nếu: phân xanh đậm kèm sốt, phân có máu, nhầy nhiều/mùi hôi bất thường, kèm quấy khóc bất thường.", category: "Sức khoẻ", emoji: "💩" },
+  { id: 12, question: "Bé có cần đi khám mắt/thính lực sớm không?", answer: "Thính lực: tầm soát ngay sau sinh (OAE/ABR) tại bệnh viện. Thị lực: kiểm tra phản xạ đỏ đồng tử lúc sơ sinh. Khám mắt chuyên sâu nếu: bé không theo dõi vật di chuyển lúc 3 tháng, mắt lé, đồng tử trắng. Nên khám mắt tổng quát lúc 1 tuổi.", category: "Sức khoẻ", emoji: "👀" },
+  { id: 13, question: "Mẹ bị cảm/sốt có nên tiếp tục cho bú không?", answer: "CÓ. Sữa mẹ chứa kháng thể giúp bảo vệ bé. Vi rút cảm lạnh không lây qua sữa mẹ. Mẹ nên: đeo khẩu trang khi cho bú, rửa tay sạch, uống thuốc an toàn cho con bú (paracetamol ok). Tham khảo bác sĩ nếu cần dùng thuốc đặc biệt.", category: "Cho bú", emoji: "🤒" },
+  { id: 14, question: "Tại sao bé hay ọc/trớ sữa?", answer: "Trào ngược sinh lý rất phổ biến (60–70% trẻ dưới 4 tháng) do cơ thắt dạ dày chưa hoàn thiện. Giảm ọc: vỗ ợ sau bú 10–15 phút, bế đầu cao 30 phút, không cho bú quá no. Cần khám nếu: ọc nặng (phun vòi rồng), sụt cân, quấy khóc nhiều khi bú.", category: "Chăm sóc", emoji: "🤮" },
+  { id: 15, question: "Bé hay đổ mồ hôi trộm ban đêm có thiếu canxi?", answer: "Đổ mồ hôi đầu khi ngủ ở trẻ nhỏ THƯỜNG DO: hệ thần kinh chưa hoàn thiện, phòng nóng, mặc nhiều đồ. Không nhất thiết do thiếu canxi. Kiểm tra: phòng mát 24–26°C, mặc đồ thoáng. Nếu kèm rụng tóc vành khăn, thóp chậm liền, chân vòng kiềng → khám kiểm tra vitamin D/canxi.", category: "Sức khoẻ", emoji: "💦" },
+];
+
+/* ------------------------------------------------------------------ */
+/* DINH DƯỠNG MẸ SAU SINH                                            */
+/* ------------------------------------------------------------------ */
+
+export interface PostpartumSection {
+  title: string;
+  icon: string;
+  items: string[];
+}
+
+export const postpartumData: PostpartumSection[] = [
+  {
+    title: "Nguyên tắc dinh dưỡng sau sinh",
+    icon: "🥗",
+    items: [
+      "Mẹ cho bú cần thêm ~500 kcal/ngày so với bình thường (tổng ~2300–2500 kcal).",
+      "Ăn đa dạng 5 nhóm thực phẩm: tinh bột, đạm, béo, vitamin, khoáng chất.",
+      "Uống đủ 2.5–3 lít nước/ngày (nước lọc, sữa, canh, nước ép).",
+      "Chia thành 5–6 bữa nhỏ thay vì 3 bữa lớn để duy trì năng lượng.",
+      "Không ăn kiêng giảm cân ít nhất 6 tuần đầu sau sinh.",
+    ],
+  },
+  {
+    title: "Thực phẩm lợi sữa",
+    icon: "🤱",
+    items: [
+      "Cháo chân giò hầm đu đủ xanh – công thức lợi sữa truyền thống hiệu quả.",
+      "Hạt: vừng đen, hạt điều, óc chó – giàu chất béo tốt giúp sữa mẹ béo hơn.",
+      "Rau ngót, rau dền, mồng tơi – rau xanh đậm hỗ trợ tiết sữa.",
+      "Cá hồi, cá thu – omega-3 (DHA) truyền qua sữa giúp phát triển não bé.",
+      "Yến mạch, gạo lứt – ngũ cốc nguyên hạt giàu năng lượng và chất xơ.",
+      "Uống sữa ấm hoặc nước gừng ấm trước khi cho bú giúp tiết sữa tốt hơn.",
+    ],
+  },
+  {
+    title: "Thực phẩm nên hạn chế / tránh",
+    icon: "🚫",
+    items: [
+      "Rượu, bia: truyền qua sữa mẹ, ảnh hưởng não bé. Nếu uống, đợi ≥ 2 giờ mới cho bú.",
+      "Caffeine: giới hạn < 300mg/ngày (khoảng 2 ly cà phê). Quá nhiều khiến bé khó ngủ.",
+      "Đồ sống (gỏi, sushi, trứng lòng đào) – nguy cơ nhiễm khuẩn.",
+      "Đồ ăn cay quá mức có thể khiến bé quấy khóc, đi ngoài.",
+      "Thực phẩm gây dị ứng phổ biến (đậu phộng, hải sản): theo dõi phản ứng bé sau khi mẹ ăn.",
+      "Thuốc lá: nicotine giảm sản lượng sữa, gây hại phổi bé qua khói thụ động.",
+    ],
+  },
+  {
+    title: "Phục hồi thể chất sau sinh",
+    icon: "🏃‍♀️",
+    items: [
+      "6 tuần đầu: nghỉ ngơi là chính, đi bộ nhẹ trong nhà khi sẵn sàng.",
+      "Sau 6–8 tuần (sinh thường) hoặc 8–12 tuần (sinh mổ): tập nhẹ (yoga, pilates, đi bộ).",
+      "Bài tập Kegel giúp phục hồi sàn chậu – bắt đầu ngay sau sinh nếu không đau.",
+      "Quấn bụng/đai bụng hỗ trợ nhưng không thay thế tập luyện.",
+      "Giảm cân từ từ: mục tiêu 0.5kg/tuần, không giảm quá nhanh ảnh hưởng sữa.",
+      "Kiểm tra lại sức khoẻ mẹ ở mốc 6 tuần sau sinh (khám hậu sản).",
+    ],
+  },
+  {
+    title: "Sức khoẻ tinh thần sau sinh",
+    icon: "💆‍♀️",
+    items: [
+      "Baby blues (50–80% mẹ): buồn, khóc, lo lắng 1–2 tuần đầu → tự hết.",
+      "Trầm cảm sau sinh (10–15%): kéo dài > 2 tuần, mất hứng thú, suy nghĩ tiêu cực → cần hỗ trợ chuyên khoa.",
+      "Dấu hiệu cần gặp bác sĩ ngay: nghĩ đến tự gây hại bản thân hoặc bé.",
+      "Ngủ khi bé ngủ, không cố 'hoàn hảo' mọi thứ.",
+      "Nhờ ba/ông bà giúp: chia việc cho bú đêm (vắt sữa sẵn), nấu ăn, dọn nhà.",
+      "Tham gia nhóm mẹ bỉm (online/offline) để chia sẻ và học hỏi kinh nghiệm.",
+    ],
+  },
+  {
+    title: "Bổ sung vi chất sau sinh",
+    icon: "💊",
+    items: [
+      "Sắt: bổ sung 4–6 tuần sau sinh nếu thiếu máu (đặc biệt mất máu nhiều khi sinh).",
+      "Canxi: 1000mg/ngày từ thức ăn + bổ sung nếu cần (sữa, phô mai, đậu nành).",
+      "Vitamin D: 600–1000 IU/ngày giúp hấp thu canxi, phòng loãng xương.",
+      "DHA: 200–300mg/ngày (từ cá béo hoặc viên bổ sung) hỗ trợ não bé qua sữa mẹ.",
+      "Iốt: quan trọng cho tuyến giáp mẹ và phát triển trí não bé → dùng muối iốt.",
+      "Tiếp tục vitamin tổng hợp bà bầu trong 3–6 tháng sau sinh rồi chuyển sang đa vitamin thường.",
+    ],
+  },
 ];

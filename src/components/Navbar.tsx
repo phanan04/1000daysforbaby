@@ -12,6 +12,8 @@ const links = [
   { href:"/meo-hay",              label:"Mẹo Hay",     emoji:"✨" },
   { href:"/tinh-tuoi",            label:"Bé Của Tôi",  emoji:"🎂" },
   { href:"/bang-tang-truong",     label:"Tăng Trưởng", emoji:"📏" },
+  { href:"/hoi-dap",              label:"Hỏi Đáp",     emoji:"❓" },
+  { href:"/me-sau-sinh",          label:"Mẹ Sau Sinh", emoji:"🤱" },
 ];
 
 const navStyle: React.CSSProperties = {
