@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { weaningMenus } from "@/lib/data";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",
@@ -23,6 +25,8 @@ export default function WeaningPage() {
 
   return (
     <div>
+      <Breadcrumb items={[{ label: "Thực Đơn Ăn Dặm" }]} />
+
       {/* Hero */}
       <section style={{ padding:"48px 20px 32px" }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -100,6 +104,8 @@ export default function WeaningPage() {
           </div>
         </div>
       </section>
+
+      <RelatedPages currentPath="/thuc-don-an-dam" />
     </div>
   );
 }

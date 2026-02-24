@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { postpartumData } from "@/lib/data";
 import Link from "next/link";
 import ShareButton from "@/components/ShareButton";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "Dinh Dưỡng Mẹ Sau Sinh — 1000 Ngày Đầu Đời",
@@ -32,6 +34,8 @@ const sectionColors = ["#d4a0a7", "#c8836a", "#b89a5e", "#c08890", "#6b9bd2", "#
 
 export default function PostpartumPage() {
   return (
+    <>
+    <Breadcrumb items={[{ label: "Mẹ Sau Sinh" }]} />
     <div style={{ padding: "32px 20px 64px" }}>
       <div className="max-w-4xl mx-auto">
 
@@ -127,5 +131,7 @@ export default function PostpartumPage() {
         </div>
       </div>
     </div>
+    <RelatedPages currentPath="/me-sau-sinh" />
+    </>
   );
 }

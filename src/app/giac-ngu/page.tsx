@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { sleepChartData } from "@/lib/data";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",
@@ -20,6 +22,8 @@ export default function SleepPage() {
 
   return (
     <div>
+      <Breadcrumb items={[{ label: "Bảng Giấc Ngủ" }]} />
+
       {/* Hero */}
       <section style={{ padding:"48px 20px 32px" }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -154,6 +158,8 @@ export default function SleepPage() {
           </div>
         </div>
       </section>
+
+      <RelatedPages currentPath="/giac-ngu" />
     </div>
   );
 }

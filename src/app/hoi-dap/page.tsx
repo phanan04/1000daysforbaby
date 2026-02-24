@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { faqData } from "@/lib/data";
 import ShareButton from "@/components/ShareButton";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 
 const neu: React.CSSProperties = {
   background: "#eae6e1",
@@ -25,6 +27,8 @@ export default function FAQPage() {
   const filtered = cat === "Tất cả" ? faqData : faqData.filter((f) => f.category === cat);
 
   return (
+    <>
+    <Breadcrumb items={[{ label: "Hỏi Đáp" }]} />
     <div style={{ padding: "32px 20px 64px" }}>
       <div className="max-w-3xl mx-auto">
 
@@ -135,5 +139,7 @@ export default function FAQPage() {
         </div>
       </div>
     </div>
+    <RelatedPages currentPath="/hoi-dap" />
+    </>
   );
 }

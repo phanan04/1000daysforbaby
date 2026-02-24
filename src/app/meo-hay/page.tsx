@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { tips, devMilestones } from "@/lib/data";
 import Link from "next/link";
 import ShareButton from "@/components/ShareButton";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "Mẹo Hay Chăm Sóc Bé — 1000 Ngày Đầu Đời",
@@ -27,6 +29,8 @@ const palette = ["#d4a0a7","#c8836a","#b89a5e","#d4a0a7","#c8836a","#b89a5e","#d
 
 export default function MeoHay() {
   return (
+    <>
+    <Breadcrumb items={[{ label: "Mẹo Hay" }]} />
     <div style={{ padding:"32px 20px 64px" }}>
       <div className="max-w-5xl mx-auto">
         {/* Back */}
@@ -110,5 +114,7 @@ export default function MeoHay() {
         <ShareButton title="Mẹo Hay Nuôi Con" text="Tổng hợp mẹo hay chăm sóc bé trong 1000 ngày đầu đời" />
       </div>
     </div>
+    <RelatedPages currentPath="/meo-hay" />
+    </>
   );
 }

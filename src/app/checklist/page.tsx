@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { checklistData } from "@/lib/data";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",
@@ -30,6 +32,8 @@ export default function ChecklistPage() {
 
   return (
     <div>
+      <Breadcrumb items={[{ label: "Checklist" }]} />
+
       {/* Hero */}
       <section style={{ padding:"48px 20px 32px" }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -125,6 +129,8 @@ export default function ChecklistPage() {
           })}
         </div>
       </section>
+
+      <RelatedPages currentPath="/checklist" />
     </div>
   );
 }

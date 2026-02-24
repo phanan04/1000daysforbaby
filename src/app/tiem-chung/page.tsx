@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { vaccineSchedule } from "@/lib/data";
 import Link from "next/link";
 import ShareButton from "@/components/ShareButton";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 
 export const metadata: Metadata = {
   title: "Lịch Tiêm Chủng Cho Bé — 1000 Ngày Đầu Đời",
@@ -27,6 +29,8 @@ const dotColor = ["#d4a0a7","#c8836a","#b89a5e"];
 
 export default function TiemChung() {
   return (
+    <>
+    <Breadcrumb items={[{ label: "Lịch Tiêm Chủng" }]} />
     <div style={{ padding:"32px 20px 64px" }}>
       <div className="max-w-4xl mx-auto">
         {/* Back */}
@@ -103,5 +107,7 @@ export default function TiemChung() {
         <ShareButton title="Lịch Tiêm Chủng" text="Lịch tiêm chủng đầy đủ cho bé từ sơ sinh đến 2 tuổi" />
       </div>
     </div>
+    <RelatedPages currentPath="/tiem-chung" />
+    </>
   );
 }

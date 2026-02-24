@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { easySchedules } from "@/lib/data";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",
@@ -28,6 +30,8 @@ export default function EasyPage() {
 
   return (
     <div>
+      <Breadcrumb items={[{ label: "Phương Pháp EASY" }]} />
+
       {/* Hero */}
       <section style={{ padding:"48px 20px 32px" }}>
         <div className="max-w-4xl mx-auto text-center">
@@ -133,6 +137,8 @@ export default function EasyPage() {
           </div>
         </div>
       </section>
+
+      <RelatedPages currentPath="/phuong-phap-easy" />
     </div>
   );
 }

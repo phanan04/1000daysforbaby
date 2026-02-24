@@ -4,6 +4,8 @@ import { use, useState } from "react";
 import { stages } from "@/lib/data";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Breadcrumb from "@/components/Breadcrumb";
+import RelatedPages from "@/components/RelatedPages";
 
 const neu: React.CSSProperties = {
   background:"#eae6e1",
@@ -63,8 +65,14 @@ export default function StagePage({ params }: { params: Promise<{ slug: string }
 
   return (
     <div>
+      {/* Breadcrumb */}
+      <Breadcrumb items={[
+        { label: "Giai Đoạn", href: "/#stages" },
+        { label: stage.title },
+      ]} />
+
       {/* Back */}
-      <div style={{ padding:"20px 20px 0" }} className="max-w-4xl mx-auto">
+      <div style={{ padding:"12px 20px 0" }} className="max-w-4xl mx-auto">
         <Link href="/" style={{ ...neu, display:"inline-flex", alignItems:"center", gap:"8px",
                                  padding:"8px 18px", textDecoration:"none", borderRadius:"30px",
                                  color:"#7c6b5e", fontWeight:700, fontSize:"0.82rem" }}>
@@ -198,6 +206,9 @@ export default function StagePage({ params }: { params: Promise<{ slug: string }
           })}
         </div>
       </section>
+
+      {/* Related pages */}
+      <RelatedPages currentPath={`/giai-doan/${slug}`} />
 
       {/* Nav between stages */}
       <div style={{ padding:"0 20px 56px" }} className="max-w-4xl mx-auto">
