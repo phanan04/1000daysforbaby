@@ -77,10 +77,16 @@ export default function ChecklistPage() {
           {checklistData.map(group => {
             const groupChecked = group.items.filter((_, j) => checked.has(`${group.stage}-${j}`)).length;
             return (
-              <div key={group.stage} style={{ ...neu, padding:"20px 18px", borderTop:`3px solid ${group.color}` }}>
+              <div key={group.stage} style={{ ...neu, padding:"20px 18px", borderBottom:`3px solid ${group.color}` }}>
                 <div className="flex items-center justify-between" style={{ marginBottom:"14px" }}>
-                  <h2 style={{ fontWeight:800, fontSize:"1rem", color:"#3a3028", display:"flex", alignItems:"center", gap:"8px" }}>
-                    <span style={{ fontSize:"1.3rem" }}>{group.emoji}</span> {group.stage}
+                  <h2 style={{ fontWeight:800, fontSize:"1rem", color:"#3a3028", display:"flex", alignItems:"center", gap:"10px" }}>
+                    <span style={{
+                      width:36, height:36, borderRadius:"50%", display:"inline-flex",
+                      alignItems:"center", justifyContent:"center", fontSize:"1.1rem", flexShrink:0,
+                      background:`${group.color}18`,
+                      boxShadow:`inset 2px 2px 6px rgba(180,170,155,0.5),inset -2px -2px 6px rgba(255,255,255,0.8)`,
+                    }}>{group.emoji}</span>
+                    {group.stage}
                   </h2>
                   <span style={{ fontSize:"0.72rem", fontWeight:700, color: group.color }}>
                     {groupChecked}/{group.items.length}

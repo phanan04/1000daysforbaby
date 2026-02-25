@@ -59,18 +59,33 @@ export default function MeoHay() {
           {tips.map((t, i) => {
             const c = palette[i];
             return (
-              <div key={t.id} style={{ ...neu, padding:"24px 22px", borderTop:`3px solid ${c}` }}>
-                <div style={{ fontSize:"2rem", marginBottom:"10px" }}>{t.emoji}</div>
-                <div style={{ ...inset, display:"inline-block", padding:"3px 12px", borderRadius:"20px",
-                               fontSize:"0.7rem", fontWeight:800, color:c, marginBottom:"10px" }}>
+              <div key={t.id} style={{ ...neu, padding:"24px 22px", borderBottom:`3px solid ${c}`,
+                                       display:"flex", flexDirection:"column" }}
+                   className="card-hover">
+                {/* Emoji circle */}
+                <div style={{
+                  width:52, height:52, borderRadius:"50%", display:"flex",
+                  alignItems:"center", justifyContent:"center",
+                  fontSize:"1.5rem", marginBottom:"12px", flexShrink:0,
+                  background:`${c}18`,
+                  boxShadow:`inset 3px 3px 8px rgba(180,170,155,0.5),inset -3px -3px 8px rgba(255,255,255,0.8)`,
+                }}>{t.emoji}</div>
+                {/* Category badge */}
+                <div style={{
+                  display:"inline-block", padding:"3px 12px", borderRadius:"20px",
+                  fontSize:"0.68rem", fontWeight:800, color:c,
+                  background:`${c}15`, marginBottom:"10px", alignSelf:"flex-start",
+                }}>
                   {t.category}
                 </div>
                 <div style={{ fontWeight:800, fontSize:"0.95rem", color:"#3a3028", marginBottom:"8px" }}>
                   {t.title}
                 </div>
-                <p style={{ fontSize:"0.8rem", color:"#8c7b6e", lineHeight:1.6, margin:0 }}>{t.content}</p>
-                <div style={{ marginTop:"10px", fontSize:"0.72rem", fontWeight:700,
-                               color:"#a09080", background:"none" }}>
+                <p style={{ fontSize:"0.8rem", color:"#8c7b6e", lineHeight:1.6, margin:0, flex:1 }}>{t.content}</p>
+                <div style={{
+                  marginTop:"12px", fontSize:"0.7rem", fontWeight:700,
+                  color:"#a09080", display:"flex", alignItems:"center", gap:4
+                }}>
                   🏷 {t.tag}
                 </div>
               </div>

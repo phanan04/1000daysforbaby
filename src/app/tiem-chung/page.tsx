@@ -45,7 +45,7 @@ export default function TiemChung() {
           <div style={{ ...neu, display:"inline-block", padding:"12px 20px", borderRadius:"50%",
                          fontSize:"2.5rem", marginBottom:"18px" }}>💉</div>
           <h1 style={{ fontWeight:800, fontSize:"clamp(1.6rem,4vw,2.2rem)", color:"#3a3028", marginBottom:"10px" }}>
-            Lich Tiem Chung
+            Lịch Tiêm Chủng
           </h1>
           <p style={{ color:"#8c7b6e", maxWidth:"500px", margin:"0 auto", lineHeight:1.65 }}>
             Theo dõi đầy đủ lịch tiêm chủng cho bé, bảo vệ sức khỏe toàn diện.
@@ -79,7 +79,7 @@ export default function TiemChung() {
                   )}
                 </div>
                 {/* card */}
-                <div style={{ ...neu, flex:1, padding:"20px 22px", borderTop:`3px solid ${c}` }}>
+                <div style={{ ...neu, flex:1, padding:"20px 22px", borderBottom:`3px solid ${c}` }}>
                   <div style={{ fontWeight:800, fontSize:"1rem", color:"#3a3028", marginBottom:"12px" }}>
                     {v.age}
                   </div>
