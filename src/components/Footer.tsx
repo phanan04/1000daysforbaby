@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
           <div style={card}>
             <div style={{ fontWeight:700, color:"#c08890", marginBottom:"12px", fontSize:"0.9rem" }}>🔗 Tiện Ích</div>
-            {[["💉","Lịch Tiêm Chủng","/tiem-chung"],["✨","Mẹo Hay","/meo-hay"]].map(([e,l,h]) => (
+            {[["💉","Lịch Tiêm Chủng","/tiem-chung"],["✨","Mẹo Hay","/meo-hay"],["🗺️","Sơ Đồ Trang","/so-do-trang"]].map(([e,l,h]) => (
               <Link key={h as string} href={h as string}
                 style={{ display:"flex", alignItems:"center", gap:"8px", color:"#7c6b5e",
                          fontSize:"0.82rem", fontWeight:600, padding:"4px 0", textDecoration:"none" }}>

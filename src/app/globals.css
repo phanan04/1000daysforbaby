@@ -122,3 +122,16 @@ h1,h2,h3,h4,h5 {
   animation: shimmer 3s infinite linear;
   opacity: 0.6;
 }
+
+/* ━━━ CARD HOVER ━━━ */
+.card-hover {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-hover:hover {
+  box-shadow: 10px 10px 24px rgba(180,170,155,0.75), -10px -10px 24px rgba(255,255,255,0.95);
+  transform: translateY(-3px);
+}
+.card-hover:active {
+  transform: translateY(0px);
+  box-shadow: inset 3px 3px 8px rgba(180,170,155,0.6), inset -3px -3px 8px rgba(255,255,255,0.85);
+}

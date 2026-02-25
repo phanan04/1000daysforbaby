@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import { WebSiteJsonLd } from "@/components/JsonLd";
 
 const nunito = Nunito({
   subsets: ["latin", "vietnamese"],
@@ -72,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="vi" className={nunito.variable}>
       <body className="antialiased">
+        <WebSiteJsonLd />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
