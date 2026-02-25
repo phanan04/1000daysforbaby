@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
         </div>
         <div style={{ textAlign:"center", color:"#a09080", fontSize:"0.78rem", fontWeight:600 }}>
-          © 2025 1000 Ngày Đầu Đời — Yêu thương và chăm sóc
+          © 2026 1000 Ngày Đầu Đời — Yêu thương và chăm sóc
         </div>
       </div>
     </footer>
