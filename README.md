@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="public/logo.svg" alt="1000 Ngày Đầu Đời" width="100" />
-</p>
-
-<h1 align="center">1000 Ngày Đầu Đời</h1>
+<h1 align="center">🌸 1000 Ngày Đầu Đời</h1>
 
 <p align="center">
   Cẩm nang chăm sóc mẹ và bé từ thai kỳ đến 2 tuổi — 1000 ngày vàng đầu đời.

@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -44,7 +43,7 @@ const logoBoxStyle: React.CSSProperties = {
   borderRadius:"14px",
   width:42, height:42,
   display:"flex", alignItems:"center", justifyContent:"center",
-  overflow:"hidden",
+  fontSize:"22px",
 };
 const menuBtnStyle: React.CSSProperties = {
   background:"#eae6e1",
@@ -63,9 +62,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50" style={navStyle}>
       <div className="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 no-underline">
-          <div style={logoBoxStyle}>
-            <Image src="/logo.svg" alt="1000 Ngày Đầu Đời logo" width={42} height={42} priority />
-          </div>
+          <div style={logoBoxStyle}>🌸</div>
           <div>
             <div style={{ fontWeight:800, fontSize:"1rem", lineHeight:1.1, color:"#c08890" }}>1000 Ngày</div>
             <div style={{ fontSize:"0.65rem", color:"#8c7b6e", fontWeight:600, lineHeight:1.2 }}>Đầu Đời</div>
