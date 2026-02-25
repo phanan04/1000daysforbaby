@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="public/logo.svg" alt="1000 Ngày Đầu Đời" width="100" />
+</p>
 
-## Getting Started
+<h1 align="center">1000 Ngày Đầu Đời</h1>
 
-First, run the development server:
+<p align="center">
+  Cẩm nang chăm sóc mẹ và bé từ thai kỳ đến 2 tuổi — 1000 ngày vàng đầu đời.
+</p>
+
+<p align="center">
+  <a href="https://1000daysforbabies.io.vn">🌸 1000daysforbabies.io.vn</a>
+</p>
+
+---
+
+## ✨ Tính năng
+
+- 🤰 **Giai đoạn phát triển** — Thai kỳ, 0–6 tháng, 6–12 tháng, 1–2 tuổi
+- 📋 **Phương pháp EASY** — Lịch sinh hoạt khoa học cho bé
+- 🍽️ **Thực đơn ăn dặm** — Gợi ý theo từng độ tuổi
+- 😴 **Giấc ngủ** — Bảng giấc ngủ và mẹo cải thiện
+- 💉 **Lịch tiêm chủng** — Theo khuyến cáo Bộ Y tế
+- 📏 **Biểu đồ tăng trưởng** — Theo dõi cân nặng và chiều cao
+- 🎂 **Tính tuổi bé** — Tính chính xác theo ngày sinh
+- ✅ **Checklist** — Đồ dùng cần thiết cho mẹ và bé
+- ✨ **Mẹo hay** — Kinh nghiệm thực tế từ cộng đồng
+- 🤱 **Mẹ sau sinh** — Chăm sóc sức khỏe sau sinh
+
+## 🛠️ Công nghệ
+
+- [Next.js 16](https://nextjs.org) — App Router, SSG
+- [Tailwind CSS](https://tailwindcss.com) — Neumorphic UI
+- [Framer Motion](https://www.framer.com/motion) — Animation
+- [Recharts](https://recharts.org) — Biểu đồ tăng trưởng
+- [Lucide React](https://lucide.dev) — Icon
+
+## 🚀 Chạy dự án
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Mở [http://localhost:3000](http://localhost:3000) trên trình duyệt.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Cấu trúc
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/          # Các trang (App Router)
+├── components/   # Navbar, Footer, ...
+└── lib/          # Dữ liệu (data.ts)
+public/
+└── logo.svg      # Logo website
+```
 
-## Learn More
+## 🌐 Deploy
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Website được deploy tại: [https://1000daysforbabies.io.vn](https://1000daysforbabies.io.vn)
