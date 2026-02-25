@@ -143,7 +143,7 @@ export default function Home() {
 
       {/* ── LEVEL 2: Công cụ chính ── */}
       <ScrollFade delay={0.05}>
-      <section style={{ padding:"48px 20px 40px", background:"#f0ece8" }}>
+      <section style={{ padding:"48px 20px 40px", background:"#f0ece8" }} className="cv-auto">
         <div className="max-w-5xl mx-auto">
           <div className="text-center" style={{ marginBottom:8 }}>
             <span style={{ ...inset, display:"inline-block", padding:"4px 16px", fontSize:"0.68rem",
@@ -182,7 +182,7 @@ export default function Home() {
 
       {/* ── LEVEL 3: Công cụ bổ sung ── */}
       <ScrollFade delay={0.1}>
-      <section style={{ padding:"48px 20px 40px", background:"#f0ece8" }}>
+      <section style={{ padding:"48px 20px 40px", background:"#f0ece8" }} className="cv-auto">
         <div className="max-w-5xl mx-auto">
           <h3 style={{ fontWeight:800, fontSize:"1rem", color:"#8c7b6e", textAlign:"center", marginBottom:16 }}>
             📊 Theo Dõi & Tra Cứu
@@ -208,7 +208,7 @@ export default function Home() {
 
       {/* ── LEVEL 4: Kiến thức ── */}
       <ScrollFade delay={0.15}>
-      <section style={{ padding:"0 20px 40px", background:"#f0ece8" }}>
+      <section style={{ padding:"0 20px 40px", background:"#f0ece8" }} className="cv-auto">
         <div className="max-w-5xl mx-auto">
           <h3 style={{ fontWeight:800, fontSize:"1rem", color:"#8c7b6e", textAlign:"center", marginBottom:16 }}>
             📚 Kiến Thức & Hỗ Trợ

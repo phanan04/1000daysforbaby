@@ -135,3 +135,43 @@ h1,h2,h3,h4,h5 {
   transform: translateY(0px);
   box-shadow: inset 3px 3px 8px rgba(180,170,155,0.6), inset -3px -3px 8px rgba(255,255,255,0.85);
 }
+
+/* ━━━ PERFORMANCE: content-visibility ━━━ */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 400px;
+}
+
+/* ━━━ PERFORMANCE: prefers-reduced-motion ━━━ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ━━━ MOBILE: minimum touch target 44px ━━━ */
+@media (hover: none) and (pointer: coarse) {
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Override for inline links */
+  p a, li a {
+    display: inline;
+    min-height: unset;
+    min-width: unset;
+  }
+}
+
+/* ━━━ MOBILE: tap highlight ━━━ */
+a, button {
+  -webkit-tap-highlight-color: rgba(192, 136, 144, 0.15);
+}
